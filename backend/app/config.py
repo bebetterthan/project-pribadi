@@ -57,7 +57,30 @@ class Settings(BaseSettings):
     # =========================================================================
     USE_SAFE_AI_MODE: bool = True
     
-    # Gemini API
+    # Ollama Configuration (Primary AI Provider)
+    # URL for Ollama service (GitHub Codespaces or local)
+    OLLAMA_URL: str = "https://zany-acorn-v6jqg9w5qw4w3r4w-11434.app.github.dev"
+    
+    # Model selection - Qwen 2.5 14B for strategic reasoning
+    OLLAMA_MODEL: str = "qwen2.5:14b"
+    
+    # Request timeout in seconds (10-120 recommended)
+    OLLAMA_TIMEOUT: int = 30
+    
+    # Enable/disable AI integration globally
+    ENABLE_AI_INTEGRATION: bool = True
+    
+    # Intelligence Router Thresholds
+    # Subdomain count threshold for strategic planning
+    QWEN_TRIGGER_SUBDOMAIN_COUNT: int = 100
+    
+    # Finding count threshold for AI prioritization
+    QWEN_TRIGGER_FINDING_COUNT: int = 20
+    
+    # Enable response caching
+    ENABLE_RESPONSE_CACHE: bool = True
+    
+    # Gemini API (Legacy/Fallback)
     GEMINI_API_TIMEOUT: int = 30  # seconds
     GEMINI_MAX_RETRIES: int = 3
     GEMINI_RETRY_BASE_DELAY: float = 1.0
