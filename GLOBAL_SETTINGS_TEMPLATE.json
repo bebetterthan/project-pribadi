@@ -1,0 +1,537 @@
+{
+  // ============================================================================
+  // GITHUB COPILOT - ULTIMATE MAX AGENT MODE (GLOBAL SETTINGS)
+  // Ultra-optimized for maximum agent autonomy like Cursor Max Mode
+  // Applied globally across ALL VS Code workspaces
+  //
+  // Author: AI Assistant
+  // Date: November 9, 2025
+  // Purpose: Maximum productivity with AI agent assistance
+  // ============================================================================
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  COPILOT CORE - MAXIMUM ENABLEMENT                                    ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "github.copilot.enable": {
+    "*": true, // Enable EVERYWHERE
+    "plaintext": true, // Even in plain text
+    "markdown": true, // Documentation
+    "yaml": true, // Config files
+    "json": true, // JSON
+    "jsonc": true, // JSON with comments
+    "xml": true, // XML
+    "html": true, // HTML
+    "css": true, // CSS
+    "scss": true, // SCSS
+    "less": true, // LESS
+    "javascript": true, // JS
+    "typescript": true, // TS
+    "python": true, // Python
+    "java": true, // Java
+    "go": true, // Go
+    "rust": true, // Rust
+    "c": true, // C
+    "cpp": true, // C++
+    "csharp": true, // C#
+    "php": true, // PHP
+    "ruby": true, // Ruby
+    "shellscript": true, // Bash/Shell
+    "powershell": true, // PowerShell
+    "bat": true, // Batch
+    "sql": true, // SQL
+    "dockerfile": true, // Docker
+    "git-commit": true, // Git commits
+    "git-rebase": true, // Git rebase
+    "scminput": false // Only disable in SCM input
+  },
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  COPILOT CHAT - ULTRA AGENT MODE                                      ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "github.copilot.chat.followUps": "on",
+  "github.copilot.chat.localeOverride": "en",
+  "github.copilot.chat.runCommand.enabled": true,
+  "github.copilot.chat.terminalChatLocation": "quickChat",
+  "github.copilot.chat.useProjectTemplates": true,
+  "github.copilot.chat.scopeSelection": true,
+  "github.copilot.chat.experimental.codeGeneration.enabled": true,
+  "github.copilot.chat.experimental.codeGeneration.instructions": [
+    "Always use latest best practices",
+    "Add comprehensive error handling",
+    "Include type hints/annotations",
+    "Write production-ready code",
+    "Optimize for performance",
+    "Add detailed comments",
+    "Follow SOLID principles",
+    "Use async/await when beneficial"
+  ],
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  COPILOT EDITS - MULTI-FILE COMPOSER (CURSOR-LIKE)                    ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.editor.iterativeFixing": true,
+  "github.copilot.editor.enableCodeActions": true,
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  COPILOT ADVANCED - MAXIMUM CONTEXT & INTELLIGENCE                    ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "github.copilot.advanced": {
+    // Multiple suggestions for better choices
+    "inlineSuggestCount": 10, // 10 suggestions (max)
+    "listCount": 20, // 20 in suggestion list
+
+    // Model parameters (optimal for code generation)
+    "temperature": 0, // Deterministic, consistent
+    "top_p": 1, // Full probability distribution
+
+    // Context length
+    "length": 2000, // Max context length
+
+    // Debug (disabled for clean UI)
+    "debug.showScores": false,
+    "debug.overrideEngine": "",
+    "debug.overrideProxyUrl": "",
+    "debug.testOverrideProxyUrl": "",
+    "debug.filterLogCategories": []
+  },
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  EDITOR - ULTRA AGGRESSIVE AUTO-COMPLETE                              ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.suppressSuggestions": false,
+  "editor.inlineSuggest.showToolbar": "always",
+
+  "editor.quickSuggestions": {
+    "other": "on", // Always suggest
+    "comments": "on", // Even in comments
+    "strings": "on" // Even in strings
+  },
+
+  "editor.suggest.preview": true,
+  "editor.suggest.showInlineDetails": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.shareSuggestSelections": true,
+  "editor.suggest.showMethods": true,
+  "editor.suggest.showFunctions": true,
+  "editor.suggest.showConstructors": true,
+  "editor.suggest.showFields": true,
+  "editor.suggest.showVariables": true,
+  "editor.suggest.showClasses": true,
+  "editor.suggest.showStructs": true,
+  "editor.suggest.showInterfaces": true,
+  "editor.suggest.showModules": true,
+  "editor.suggest.showProperties": true,
+  "editor.suggest.showEvents": true,
+  "editor.suggest.showOperators": true,
+  "editor.suggest.showUnits": true,
+  "editor.suggest.showValues": true,
+  "editor.suggest.showConstants": true,
+  "editor.suggest.showEnums": true,
+  "editor.suggest.showEnumMembers": true,
+  "editor.suggest.showKeywords": true,
+  "editor.suggest.showWords": true,
+  "editor.suggest.showColors": true,
+  "editor.suggest.showFiles": true,
+  "editor.suggest.showReferences": true,
+  "editor.suggest.showFolders": true,
+  "editor.suggest.showTypeParameters": true,
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.showUsers": true,
+  "editor.suggest.showIssues": true,
+
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.tabCompletion": "on",
+  "editor.wordBasedSuggestions": "allDocuments",
+  "editor.wordBasedSuggestionsMode": "allDocuments",
+  "editor.parameterHints.enabled": true,
+  "editor.parameterHints.cycle": true,
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  AUTO-SAVE & AUTO-FORMAT (CURSOR-LIKE WORKFLOW)                       ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500, // Save after 0.5s (faster than default)
+  "files.autoSaveWorkspaceFilesOnly": false,
+
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": false, // Disabled (can be annoying)
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.sortImports": "explicit"
+  },
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  COPILOT WORKSPACE CONTEXT (MAXIMUM AWARENESS)                        ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "github.copilot.chat.workspaceContext": "auto",
+  "github.copilot.renameSuggestions.triggerAutomatically": true,
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  TERMINAL INTEGRATION (COMMAND SUGGESTIONS)                            ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "terminal.integrated.suggest.enabled": true,
+  "terminal.integrated.suggest.quickSuggestions": true,
+  "terminal.integrated.suggest.boldSuggestions": true,
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.shellIntegration.suggestEnabled": true,
+  "terminal.integrated.commandsToSkipShell": [],
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  INTELLISENSE & CODE LENS (ENHANCED UNDERSTANDING)                    ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "editor.codeLens": true,
+  "editor.inlayHints.enabled": "on",
+  "editor.lightbulb.enabled": "on",
+  "editor.suggest.insertMode": "replace",
+  "editor.quickSuggestionsDelay": 0, // Instant suggestions
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  PYTHON SPECIFIC (MAXIMUM INTELLIGENCE)                               ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "python.analysis.typeCheckingMode": "standard",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.indexing": true,
+  "python.analysis.packageIndexDepths": [
+    {
+      "name": "",
+      "depth": 10
+    }
+  ],
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.analysis.inlayHints.callArgumentNames": "all",
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  JAVASCRIPT/TYPESCRIPT (MAXIMUM INTELLIGENCE)                         ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
+  "typescript.suggest.includeCompletionsForImportStatements": true,
+  "typescript.suggest.paths": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+
+  "javascript.suggest.autoImports": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.suggest.includeAutomaticOptionalChainCompletions": true,
+  "javascript.suggest.includeCompletionsForImportStatements": true,
+  "javascript.suggest.paths": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  GIT INTEGRATION (SMART COMMITS)                                      ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "git.autoStash": true,
+  "git.confirmSync": false,
+  "git.suggestSmartCommit": true,
+  "git.enableCommitSigning": false,
+  "git.fetchOnPull": true,
+  "git.pruneOnFetch": true,
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  WORKSPACE TRUST (ENABLE FOR AGENT OPERATIONS)                        ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "security.workspace.trust.enabled": true,
+  "security.workspace.trust.startupPrompt": "never",
+  "security.workspace.trust.banner": "never",
+  "security.workspace.trust.emptyWindow": false,
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  SEARCH & NAVIGATION (FASTER AGENT CONTEXT GATHERING)                 ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "search.quickOpen.includeSymbols": true,
+  "search.quickOpen.includeHistory": true,
+  "search.smartCase": true,
+  "search.useGlobalIgnoreFiles": true,
+  "search.useParentIgnoreFiles": true,
+  "search.followSymlinks": true,
+  "search.collapseResults": "auto",
+  "search.maxResults": 20000,
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/venv": true,
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.git": true,
+    "**/out": true,
+    "**/.next": true,
+    "**/.nuxt": true,
+    "**/.cache": true
+  },
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  FILES MANAGEMENT (CLEANER WORKSPACE)                                 ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.pytest_cache": true,
+    "**/*.egg-info": true
+  },
+
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/.hg/store/**": true,
+    "**/venv/**": true,
+    "**/__pycache__/**": true
+  },
+
+  "files.associations": {
+    "*.bat": "bat",
+    "*.ps1": "powershell",
+    "*.sh": "shellscript",
+    ".env*": "dotenv",
+    "*.json": "jsonc",
+    "Dockerfile*": "dockerfile",
+    "*.yaml": "yaml",
+    "*.yml": "yaml"
+  },
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  BREADCRUMBS & NAVIGATION (BETTER CONTEXT AWARENESS)                  ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.filePath": "on",
+  "breadcrumbs.symbolPath": "on",
+  "breadcrumbs.symbolSortOrder": "position",
+  "breadcrumbs.icons": true,
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  EDITOR APPEARANCE (CLEANER UI, MORE FOCUS)                           ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "editor.minimap.enabled": false, // Disable minimap (distraction)
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "selection",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "editor.mouseWheelScrollSensitivity": 1,
+  "editor.fastScrollSensitivity": 5,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "editor.trimAutoWhitespace": true,
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.autoClosingDelete": "always",
+  "editor.autoSurround": "languageDefined",
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  WORKBENCH (BETTER WORKFLOW)                                          ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "workbench.editor.enablePreview": false, // Always open new tabs
+  "workbench.editor.revealIfOpen": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.list.smoothScrolling": true,
+  "workbench.startupEditor": "none",
+  "workbench.enableExperiments": true,
+  "workbench.commandPalette.history": 50,
+  "workbench.quickOpen.preserveInput": false,
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  DEBUGGING (ENHANCED DEBUG EXPERIENCE)                                ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "debug.inlineValues": "on",
+  "debug.console.fontSize": 14,
+  "debug.console.lineHeight": 20,
+  "debug.console.wordWrap": true,
+  "debug.openDebug": "openOnDebugBreak",
+  "debug.showBreakpointsInOverviewRuler": true,
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  LANGUAGE-SPECIFIC FORMATTING                                         ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.rulers": [88, 120]
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    }
+  },
+
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced"
+  },
+
+  "[dockerfile]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    }
+  },
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  PERFORMANCE OPTIMIZATION (FASTER COPILOT RESPONSE)                   ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "extensions.autoUpdate": true,
+  "extensions.autoCheckUpdates": true,
+  "update.mode": "default",
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  TELEMETRY (OPTIONAL - DISABLE FOR PRIVACY)                           ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "telemetry.telemetryLevel": "off",
+  "workbench.enableNaturalLanguageSearch": false,
+
+  // ╔═══════════════════════════════════════════════════════════════════════╗
+  // ║  CUSTOM AGENT INSTRUCTIONS (ADVANCED)                                 ║
+  // ╚═══════════════════════════════════════════════════════════════════════╝
+
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "text": "Always write production-ready code with comprehensive error handling"
+    },
+    {
+      "text": "Include type hints and docstrings for all functions"
+    },
+    {
+      "text": "Follow language-specific best practices and style guides"
+    },
+    {
+      "text": "Optimize for readability and maintainability first, then performance"
+    },
+    {
+      "text": "Add logging where appropriate for debugging"
+    },
+    {
+      "text": "Consider edge cases and input validation"
+    },
+    {
+      "text": "Write testable code with clear separation of concerns"
+    },
+    {
+      "text": "Use async/await for I/O operations when beneficial"
+    },
+    {
+      "text": "Prefer composition over inheritance"
+    },
+    {
+      "text": "Keep functions small and focused (single responsibility)"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+﻿{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "github.copilot.enable": {
+      "*": true
+    },
+    "github.copilot.advanced": {
+      "inlineSuggestCount": 10,
+      "length": 8000
+    },
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 500
+  },
+  "extensions": {
+    "recommendations": [
+      "github.copilot",
+      "github.copilot-chat",
+      "eamodio.gitlens",
+      "visualstudioexptteam.vscodeintellicode",
+      "usernamehw.errorlens"
+    ]
+  }
+}

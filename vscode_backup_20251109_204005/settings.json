@@ -1,0 +1,242 @@
+{
+    // =================== EXISTING SETTINGS ===================
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "workbench.colorTheme": "Default High Contrast",
+    "chat.agent.maxRequests": 50,
+    "chat.tools.terminal.autoApprove": {
+        "Add-Content": true,
+        "/body": true,
+        "`n": true,
+        "/html": true,
+        "\"": true,
+        "$lines": true,
+        "$output": true,
+        "foreach": true,
+        "if": true,
+        "\")": true,
+        "Set-Content": true,
+        "Test-Path": true,
+        "php artisan view:clear": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "Move-Item": true,
+        "Copy-Item": true,
+        "php artisan migrate": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    },
+    "redhat.telemetry.enabled": true,
+    "javascript.suggest.autoImports": false,
+
+    // =================== GITHUB COPILOT OPTIMIZATION ===================
+    "github.copilot.enable": {
+        "*": true,
+        "java": true,
+        "javascript": true,
+        "typescript": true,
+        "python": true,
+        "php": true,
+        "plaintext": true,
+        "markdown": true
+    },
+    "github.copilot.inlineSuggest.enable": true,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.editor.iterativeFixing": true,
+    "github.copilot.editor.enableCodeActions": true,
+    "github.copilot.advanced": {
+        "length": 500,
+        "temperature": 0.1,
+        "top_p": 0.1,
+        "indentationMode": {
+            "java": "spaces",
+            "*": "spaces"
+        }
+    },
+    "github.copilot.chat.followUps": "always",
+    "github.copilot.chat.runCommand.enabled": true,
+    "github.copilot.chat.search.semanticTextResults": 5,
+
+    // =================== EDITOR SUGGESTIONS (OPTIMIZED FOR COPILOT) ===================
+    "editor.inlineSuggest.enabled": true,
+    "editor.inlineSuggest.showToolbar": "always",
+    "editor.inlineSuggest.suppressSuggestions": false,
+    "editor.quickSuggestions": {
+        "other": "inline",
+        "comments": "off",
+        "strings": "off"
+    },
+    "editor.quickSuggestionsDelay": 10,
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.snippetSuggestions": "top",
+    "editor.suggest.showInlineDetails": true,
+    "editor.suggest.preview": true,
+    "editor.suggest.showWords": true,
+    "editor.suggest.showMethods": true,
+    "editor.suggest.showFunctions": true,
+    "editor.suggest.showKeywords": true,
+    "editor.suggest.showStatusBar": true,
+    "editor.suggest.showIcons": true,
+    "editor.suggest.insertMode": "replace",
+    "editor.suggest.filterGraceful": true,
+    "editor.suggest.shareSuggestSelections": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": true,
+    "editor.wordBasedSuggestions": "off",
+    "editor.suggest.localityBonus": false,
+    "editor.parameterHints.enabled": true,
+    "editor.parameterHints.cycle": true,
+
+    // =================== SPELL CHECKER & AUTO-CORRECT ===================
+    "cSpell.enabled": true,
+    "cSpell.language": "en,en-US",
+    "cSpell.checkLimit": 500,
+    "cSpell.diagnosticLevel": "Hint",
+    "cSpell.showSuggestionsLinkInEditorContextMenu": false,
+    "cSpell.ignoreRegExpList": [
+        "//.*",
+        "/\\*[\\s\\S]*?\\*/",
+        "\"[^\"]*\"",
+        "'[^']*'"
+    ],
+    "cSpell.words": [
+        "args",
+        "println",
+        "lang",
+        "util",
+        "javax",
+        "swing",
+        "awt",
+        "ActionListener",
+        "ActionEvent",
+        "JFrame",
+        "JButton",
+        "JLabel",
+        "JTextField",
+        "JPanel",
+        "BorderLayout",
+        "FlowLayout",
+        "GridLayout",
+        "setDefaultCloseOperation",
+        "setVisible",
+        "setSize",
+        "setLocation",
+        "addActionListener",
+        "getActionCommand",
+        "getText",
+        "setText"
+    ],
+    "autoCorrect.enable": true,
+    "autoCorrect.enableOnType": true,
+    "autoCorrect.delay": 1000,
+    "autoCorrect.replacements": {
+        "sytem": "System",
+        "sistem": "System",
+        "Sytem": "System",
+        "printn": "println",
+        "printl": "println",
+        "prnln": "println",
+        "string": "String",
+        "pubic": "public",
+        "publc": "public",
+        "privte": "private",
+        "privet": "private",
+        "retrun": "return",
+        "lenght": "length",
+        "lengh": "length",
+        "calss": "class",
+        "clas": "class",
+        "methd": "method",
+        "metod": "method",
+        "voaid": "void",
+        "viod": "void",
+        "satic": "static",
+        "statc": "static",
+        "imprt": "import",
+        "imort": "import"
+    },
+
+    // =================== JAVA LANGUAGE SETTINGS ===================
+    "java.completion.enabled": true,
+    "java.completion.guessMethodArguments": "auto",
+    "java.completion.maxResults": 50,
+    "java.codeGeneration.useBlocks": true,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.saveActions.organizeImports": true,
+    "java.autobuild.enabled": true,
+    "java.import.gradle.wrapper.checksums": [
+        {
+            "sha256": "allowed"
+        }
+    ],
+
+    // =================== EDITOR APPEARANCE & BEHAVIOR ===================
+    "editor.accessibilitySupport": "off",
+    "editor.hover.delay": 500,
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
+    "editor.minimap.enabled": true,
+    "editor.minimap.maxColumn": 80,
+    "editor.renderWhitespace": "selection",
+    "editor.smoothScrolling": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "breadcrumbs.enabled": true,
+    "editor.codeLens": true,
+    "editor.selectionHighlight": true,
+    "editor.occurrencesHighlight": "multiFile",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+
+    // =================== FILES & WORKSPACE ===================
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.associations": {
+        "*.java": "java"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
+        "**/*.class": true
+    },
+
+    // =================== TERMINAL ===================
+    "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.cursorBlinking": true,
+    "jdk.telemetry.enabled": true,
+    "mssql.connectionGroups": [
+        {
+            "name": "ROOT",
+            "id": "088313A5-FABD-4D5E-B57A-2F558CEBA7E6"
+        }
+    ],
+    "mssql.connections": [
+        {
+            "authenticationType": "SqlLogin",
+            "connectTimeout": 30,
+            "applicationName": "vscode-mssql",
+            "applicationIntent": "ReadWrite",
+            "profileName": "test-mssql",
+            "server": "34.65.240.209",
+            "trustServerCertificate": true,
+            "user": "sqlserver",
+            "password": "",
+            "database": "",
+            "savePassword": true,
+            "encrypt": "Mandatory",
+            "groupId": "088313A5-FABD-4D5E-B57A-2F558CEBA7E6",
+            "id": "859FA888-C181-471A-A072-6281178EBA43",
+            "commandTimeout": 30,
+            "profileSource": 0
+        }
+    ]
+}
