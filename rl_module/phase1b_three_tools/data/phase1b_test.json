@@ -1,0 +1,940 @@
+{
+  "version": "1.0",
+  "generated_at": "2025-11-13T04:56:18.505181",
+  "total_scenarios": 5,
+  "scenarios": [
+    {
+      "id": "phase1b_custom_ports",
+      "name": "Custom Application Ports",
+      "description": "Custom applications on non-standard ports",
+      "target": "custom.example.com",
+      "complexity": "medium",
+      "scenario_type": "edge_custom",
+      "metadata": {
+        "total_subdomains": 8,
+        "live_endpoints": 2,
+        "open_ports": 5,
+        "critical_services": 0,
+        "port_list": [
+          4000,
+          5000,
+          6000,
+          8888,
+          9999
+        ],
+        "technologies": [
+          "Custom",
+          "Go",
+          "Rust",
+          "Node.js"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "custom.example.com",
+          "subdomains": [
+            "cluster.custom.example.com",
+            "custom.custom.example.com",
+            "job.custom.example.com",
+            "node.custom.example.com",
+            "service.custom.example.com",
+            "task.custom.example.com",
+            "worker.custom.example.com",
+            "worker1.custom.example.com"
+          ],
+          "total_found": 8,
+          "execution_time_seconds": 14.795644777339183,
+          "sources_used": 11
+        },
+        "httpx": {
+          "total_checked": 8,
+          "live_endpoints": 2,
+          "endpoints": [
+            {
+              "url": "https://service.custom.example.com:443",
+              "status_code": 302,
+              "title": "Page on service.custom.example.com",
+              "tech_stack": [
+                "Rust",
+                "Node.js",
+                "Go"
+              ],
+              "response_time_ms": 80,
+              "content_length": 11625
+            },
+            {
+              "url": "https://node.custom.example.com:443",
+              "status_code": 301,
+              "title": "Page on node.custom.example.com",
+              "tech_stack": [
+                "Node.js",
+                "Rust",
+                "Go"
+              ],
+              "response_time_ms": 129,
+              "content_length": 9457
+            }
+          ],
+          "execution_time_seconds": 14.68155639989879
+        },
+        "nmap": {
+          "target": "custom.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 5,
+          "services": [
+            {
+              "port": 4000,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "unknown",
+              "version": null
+            },
+            {
+              "port": 5000,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "unknown",
+              "version": null
+            },
+            {
+              "port": 6000,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "unknown",
+              "version": null
+            },
+            {
+              "port": 8888,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "unknown",
+              "version": null
+            },
+            {
+              "port": 9999,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "unknown",
+              "version": null
+            }
+          ],
+          "execution_time_seconds": 68.01983274772837,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "active",
+        "httpx_mode": "thorough",
+        "nmap_mode": "full",
+        "reason": "Custom ports = MUST identify what's running!"
+      },
+      "rewards": {
+        "optimal": 680,
+        "suboptimal": 420
+      }
+    },
+    {
+      "id": "phase1b_pure_backend",
+      "name": "Pure Backend Infrastructure",
+      "description": "Backend services only, no web interfaces",
+      "target": "backend.example.com",
+      "complexity": "high",
+      "scenario_type": "edge_backend",
+      "metadata": {
+        "total_subdomains": 5,
+        "live_endpoints": 1,
+        "open_ports": 3,
+        "critical_services": 3,
+        "port_list": [
+          22,
+          3306,
+          5432
+        ],
+        "technologies": [
+          "Backend only",
+          "MySQL",
+          "PostgreSQL",
+          "OpenSSH"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "backend.example.com",
+          "subdomains": [
+            "custom.backend.example.com",
+            "job.backend.example.com",
+            "node.backend.example.com",
+            "service.backend.example.com",
+            "worker.backend.example.com"
+          ],
+          "total_found": 5,
+          "execution_time_seconds": 21.713045389316306,
+          "sources_used": 14
+        },
+        "httpx": {
+          "total_checked": 5,
+          "live_endpoints": 1,
+          "endpoints": [
+            {
+              "url": "https://custom.backend.example.com:443",
+              "status_code": 403,
+              "title": "Page on custom.backend.example.com",
+              "tech_stack": [
+                "OpenSSH",
+                "MySQL",
+                "Backend only"
+              ],
+              "response_time_ms": 350,
+              "content_length": 9181
+            }
+          ],
+          "execution_time_seconds": 50.69471232241027
+        },
+        "nmap": {
+          "target": "backend.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 3,
+          "services": [
+            {
+              "port": 22,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "ssh",
+              "version": "8.4p1",
+              "extra_info": "protocol 2.0"
+            },
+            {
+              "port": 3306,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "mysql",
+              "version": "8.0.32",
+              "extra_info": "unauthorized access possible"
+            },
+            {
+              "port": 5432,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "postgresql",
+              "version": "15.2",
+              "extra_info": "unauthorized access possible"
+            }
+          ],
+          "execution_time_seconds": 109.633805504052,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "passive",
+        "httpx_mode": "skip",
+        "nmap_mode": "service",
+        "reason": "No web = HTTPX useless, nmap critical!"
+      },
+      "rewards": {
+        "optimal": 720,
+        "suboptimal": 350
+      }
+    },
+    {
+      "id": "phase1b_single_many",
+      "name": "Single Subdomain, Many Ports",
+      "description": "One server running many services",
+      "target": "server.example.com",
+      "complexity": "very_high",
+      "scenario_type": "edge_single_many",
+      "metadata": {
+        "total_subdomains": 1,
+        "live_endpoints": 0,
+        "open_ports": 8,
+        "critical_services": 4,
+        "port_list": [
+          22,
+          80,
+          443,
+          3306,
+          5432,
+          6379,
+          8080,
+          9000
+        ],
+        "technologies": [
+          "All-in-one",
+          "MySQL",
+          "PostgreSQL",
+          "Redis",
+          "Jenkins",
+          "Nginx"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "server.example.com",
+          "subdomains": [
+            "node.server.example.com"
+          ],
+          "total_found": 1,
+          "execution_time_seconds": 10.485528434976795,
+          "sources_used": 7
+        },
+        "httpx": {
+          "total_checked": 1,
+          "live_endpoints": 0,
+          "endpoints": [],
+          "execution_time_seconds": 12.827303113871615
+        },
+        "nmap": {
+          "target": "server.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 8,
+          "services": [
+            {
+              "port": 22,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "ssh",
+              "version": "8.4p1",
+              "extra_info": "protocol 2.0"
+            },
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.22.1"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.20.2"
+            },
+            {
+              "port": 3306,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "mysql",
+              "version": "8.0.33",
+              "extra_info": "unauthorized access possible"
+            },
+            {
+              "port": 5432,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "postgresql",
+              "version": "15.2",
+              "extra_info": "unauthorized access possible"
+            },
+            {
+              "port": 6379,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "redis",
+              "version": "7.0.8",
+              "extra_info": "unauthorized access possible"
+            },
+            {
+              "port": 8080,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http-proxy",
+              "version": "1.24.0"
+            },
+            {
+              "port": 9000,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "2.375.3"
+            }
+          ],
+          "execution_time_seconds": 248.22709239177092,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "passive",
+        "httpx_mode": "thorough",
+        "nmap_mode": "service",
+        "reason": "Many services on one host = MUST scan all!"
+      },
+      "rewards": {
+        "optimal": 860,
+        "suboptimal": 440
+      }
+    },
+    {
+      "id": "phase1b_many_nonstandard",
+      "name": "Many Subdomains, Non-Standard Ports",
+      "description": "Microservices on custom ports",
+      "target": "micro.example.com",
+      "complexity": "high",
+      "scenario_type": "edge_many_nonstandard",
+      "metadata": {
+        "total_subdomains": 25,
+        "live_endpoints": 17,
+        "open_ports": 5,
+        "critical_services": 0,
+        "port_list": [
+          8081,
+          8082,
+          8083,
+          8084,
+          8085
+        ],
+        "technologies": [
+          "Microservices",
+          "Docker",
+          "Kubernetes",
+          "Go"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "micro.example.com",
+          "subdomains": [
+            "cluster.micro.example.com",
+            "cluster10.micro.example.com",
+            "cluster5.micro.example.com",
+            "custom.micro.example.com",
+            "custom3.micro.example.com",
+            "custom4.micro.example.com",
+            "job.micro.example.com",
+            "job16.micro.example.com",
+            "job18.micro.example.com",
+            "job6.micro.example.com",
+            "node.micro.example.com",
+            "node12.micro.example.com",
+            "node2.micro.example.com",
+            "service.micro.example.com",
+            "service13.micro.example.com",
+            "task.micro.example.com",
+            "task1.micro.example.com",
+            "task11.micro.example.com",
+            "task14.micro.example.com",
+            "task15.micro.example.com",
+            "task7.micro.example.com",
+            "task9.micro.example.com",
+            "worker.micro.example.com",
+            "worker17.micro.example.com",
+            "worker8.micro.example.com"
+          ],
+          "total_found": 25,
+          "execution_time_seconds": 11.038513273808071,
+          "sources_used": 9
+        },
+        "httpx": {
+          "total_checked": 25,
+          "live_endpoints": 17,
+          "endpoints": [
+            {
+              "url": "https://job16.micro.example.com:8082",
+              "status_code": 200,
+              "title": "Page on job16.micro.example.com",
+              "tech_stack": [
+                "Go",
+                "Kubernetes",
+                "Docker"
+              ],
+              "response_time_ms": 248,
+              "content_length": 7252
+            },
+            {
+              "url": "https://worker17.micro.example.com:8082",
+              "status_code": 301,
+              "title": "Page on worker17.micro.example.com",
+              "tech_stack": [
+                "Go",
+                "Microservices",
+                "Docker"
+              ],
+              "response_time_ms": 69,
+              "content_length": 46321
+            },
+            {
+              "url": "https://task7.micro.example.com:8081",
+              "status_code": 200,
+              "title": "Page on task7.micro.example.com",
+              "tech_stack": [
+                "Go",
+                "Docker",
+                "Microservices"
+              ],
+              "response_time_ms": 250,
+              "content_length": 46055
+            },
+            {
+              "url": "https://task1.micro.example.com:8081",
+              "status_code": 200,
+              "title": "Page on task1.micro.example.com",
+              "tech_stack": [
+                "Docker",
+                "Go",
+                "Kubernetes"
+              ],
+              "response_time_ms": 323,
+              "content_length": 1034
+            },
+            {
+              "url": "https://cluster10.micro.example.com:8081",
+              "status_code": 200,
+              "title": "Page on cluster10.micro.example.com",
+              "tech_stack": [
+                "Microservices",
+                "Docker",
+                "Kubernetes"
+              ],
+              "response_time_ms": 230,
+              "content_length": 11678
+            },
+            {
+              "url": "https://cluster5.micro.example.com:8082",
+              "status_code": 301,
+              "title": "Page on cluster5.micro.example.com",
+              "tech_stack": [
+                "Docker",
+                "Microservices",
+                "Go"
+              ],
+              "response_time_ms": 485,
+              "content_length": 43457
+            },
+            {
+              "url": "https://custom4.micro.example.com:8081",
+              "status_code": 301,
+              "title": "Page on custom4.micro.example.com",
+              "tech_stack": [
+                "Docker",
+                "Kubernetes",
+                "Microservices"
+              ],
+              "response_time_ms": 451,
+              "content_length": 39651
+            },
+            {
+              "url": "https://service.micro.example.com:8082",
+              "status_code": 403,
+              "title": "Page on service.micro.example.com",
+              "tech_stack": [
+                "Microservices",
+                "Docker",
+                "Go"
+              ],
+              "response_time_ms": 144,
+              "content_length": 32403
+            },
+            {
+              "url": "https://task.micro.example.com:8081",
+              "status_code": 403,
+              "title": "Page on task.micro.example.com",
+              "tech_stack": [
+                "Docker",
+                "Microservices",
+                "Go"
+              ],
+              "response_time_ms": 167,
+              "content_length": 46104
+            },
+            {
+              "url": "https://cluster.micro.example.com:8081",
+              "status_code": 200,
+              "title": "Page on cluster.micro.example.com",
+              "tech_stack": [
+                "Docker",
+                "Microservices",
+                "Kubernetes"
+              ],
+              "response_time_ms": 341,
+              "content_length": 4945
+            },
+            {
+              "url": "https://node12.micro.example.com:8081",
+              "status_code": 403,
+              "title": "Page on node12.micro.example.com",
+              "tech_stack": [
+                "Docker",
+                "Kubernetes",
+                "Microservices"
+              ],
+              "response_time_ms": 289,
+              "content_length": 13454
+            },
+            {
+              "url": "https://job18.micro.example.com:8082",
+              "status_code": 200,
+              "title": "Page on job18.micro.example.com",
+              "tech_stack": [
+                "Docker",
+                "Go",
+                "Microservices"
+              ],
+              "response_time_ms": 479,
+              "content_length": 18941
+            },
+            {
+              "url": "https://node2.micro.example.com:8081",
+              "status_code": 403,
+              "title": "Page on node2.micro.example.com",
+              "tech_stack": [
+                "Docker",
+                "Kubernetes",
+                "Go"
+              ],
+              "response_time_ms": 71,
+              "content_length": 3590
+            },
+            {
+              "url": "https://job.micro.example.com:8082",
+              "status_code": 403,
+              "title": "Page on job.micro.example.com",
+              "tech_stack": [
+                "Microservices",
+                "Docker",
+                "Go"
+              ],
+              "response_time_ms": 111,
+              "content_length": 15119
+            },
+            {
+              "url": "https://node.micro.example.com:8081",
+              "status_code": 403,
+              "title": "Page on node.micro.example.com",
+              "tech_stack": [
+                "Microservices",
+                "Go",
+                "Docker"
+              ],
+              "response_time_ms": 294,
+              "content_length": 7350
+            },
+            {
+              "url": "https://worker.micro.example.com:8082",
+              "status_code": 200,
+              "title": "Page on worker.micro.example.com",
+              "tech_stack": [
+                "Kubernetes",
+                "Microservices",
+                "Go"
+              ],
+              "response_time_ms": 439,
+              "content_length": 47886
+            },
+            {
+              "url": "https://task15.micro.example.com:8081",
+              "status_code": 200,
+              "title": "Page on task15.micro.example.com",
+              "tech_stack": [
+                "Kubernetes",
+                "Docker",
+                "Microservices"
+              ],
+              "response_time_ms": 346,
+              "content_length": 48746
+            }
+          ],
+          "execution_time_seconds": 23.597897891317807
+        },
+        "nmap": {
+          "target": "micro.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 5,
+          "services": [
+            {
+              "port": 8081,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http-alt",
+              "version": null
+            },
+            {
+              "port": 8082,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http-alt",
+              "version": null
+            },
+            {
+              "port": 8083,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "unknown",
+              "version": null
+            },
+            {
+              "port": 8084,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "unknown",
+              "version": null
+            },
+            {
+              "port": 8085,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "unknown",
+              "version": null
+            }
+          ],
+          "execution_time_seconds": 210.77898997413018,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "comprehensive",
+        "httpx_mode": "full",
+        "nmap_mode": "thorough",
+        "reason": "Many custom ports = worth identifying services!"
+      },
+      "rewards": {
+        "optimal": 700,
+        "suboptimal": 520
+      }
+    },
+    {
+      "id": "phase1b_mixed_custom",
+      "name": "Mixed Custom Infrastructure",
+      "description": "Combination of standard and custom services",
+      "target": "mixed.example.com",
+      "complexity": "very_high",
+      "scenario_type": "edge_mixed",
+      "metadata": {
+        "total_subdomains": 15,
+        "live_endpoints": 11,
+        "open_ports": 5,
+        "critical_services": 0,
+        "port_list": [
+          80,
+          443,
+          4567,
+          5678,
+          9876
+        ],
+        "technologies": [
+          "Mixed",
+          "Custom",
+          "Node.js",
+          "Python",
+          "Nginx"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "mixed.example.com",
+          "subdomains": [
+            "cluster.mixed.example.com",
+            "cluster3.mixed.example.com",
+            "custom.mixed.example.com",
+            "custom2.mixed.example.com",
+            "job.mixed.example.com",
+            "node.mixed.example.com",
+            "node1.mixed.example.com",
+            "service.mixed.example.com",
+            "service8.mixed.example.com",
+            "task.mixed.example.com",
+            "task5.mixed.example.com",
+            "worker.mixed.example.com",
+            "worker4.mixed.example.com",
+            "worker6.mixed.example.com",
+            "worker7.mixed.example.com"
+          ],
+          "total_found": 15,
+          "execution_time_seconds": 19.074353861821418,
+          "sources_used": 9
+        },
+        "httpx": {
+          "total_checked": 15,
+          "live_endpoints": 11,
+          "endpoints": [
+            {
+              "url": "https://worker7.mixed.example.com:80",
+              "status_code": 200,
+              "title": "Page on worker7.mixed.example.com",
+              "tech_stack": [
+                "Nginx",
+                "Custom",
+                "Mixed"
+              ],
+              "response_time_ms": 230,
+              "content_length": 9078
+            },
+            {
+              "url": "https://service8.mixed.example.com:80",
+              "status_code": 403,
+              "title": "Page on service8.mixed.example.com",
+              "tech_stack": [
+                "Node.js",
+                "Custom",
+                "Mixed"
+              ],
+              "response_time_ms": 404,
+              "content_length": 4884
+            },
+            {
+              "url": "https://task.mixed.example.com:80",
+              "status_code": 403,
+              "title": "Page on task.mixed.example.com",
+              "tech_stack": [
+                "Mixed",
+                "Nginx",
+                "Node.js"
+              ],
+              "response_time_ms": 166,
+              "content_length": 13732
+            },
+            {
+              "url": "https://job.mixed.example.com:443",
+              "status_code": 200,
+              "title": "Page on job.mixed.example.com",
+              "tech_stack": [
+                "Nginx",
+                "Node.js",
+                "Python"
+              ],
+              "response_time_ms": 113,
+              "content_length": 39822
+            },
+            {
+              "url": "https://task5.mixed.example.com:80",
+              "status_code": 200,
+              "title": "Page on task5.mixed.example.com",
+              "tech_stack": [
+                "Nginx",
+                "Node.js",
+                "Mixed"
+              ],
+              "response_time_ms": 110,
+              "content_length": 9439
+            },
+            {
+              "url": "https://cluster3.mixed.example.com:443",
+              "status_code": 301,
+              "title": "Page on cluster3.mixed.example.com",
+              "tech_stack": [
+                "Custom",
+                "Nginx",
+                "Python"
+              ],
+              "response_time_ms": 243,
+              "content_length": 34736
+            },
+            {
+              "url": "https://node.mixed.example.com:80",
+              "status_code": 302,
+              "title": "Page on node.mixed.example.com",
+              "tech_stack": [
+                "Mixed",
+                "Custom",
+                "Node.js"
+              ],
+              "response_time_ms": 440,
+              "content_length": 14795
+            },
+            {
+              "url": "https://cluster.mixed.example.com:443",
+              "status_code": 403,
+              "title": "Page on cluster.mixed.example.com",
+              "tech_stack": [
+                "Mixed",
+                "Custom",
+                "Nginx"
+              ],
+              "response_time_ms": 153,
+              "content_length": 3938
+            },
+            {
+              "url": "https://worker4.mixed.example.com:443",
+              "status_code": 403,
+              "title": "Page on worker4.mixed.example.com",
+              "tech_stack": [
+                "Python",
+                "Custom",
+                "Nginx"
+              ],
+              "response_time_ms": 364,
+              "content_length": 21550
+            },
+            {
+              "url": "https://worker.mixed.example.com:443",
+              "status_code": 403,
+              "title": "Page on worker.mixed.example.com",
+              "tech_stack": [
+                "Node.js",
+                "Custom",
+                "Nginx"
+              ],
+              "response_time_ms": 476,
+              "content_length": 46444
+            },
+            {
+              "url": "https://custom.mixed.example.com:80",
+              "status_code": 200,
+              "title": "Page on custom.mixed.example.com",
+              "tech_stack": [
+                "Python",
+                "Node.js",
+                "Custom"
+              ],
+              "response_time_ms": 237,
+              "content_length": 21934
+            }
+          ],
+          "execution_time_seconds": 42.37188356829171
+        },
+        "nmap": {
+          "target": "mixed.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 5,
+          "services": [
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.24.0"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.24.0"
+            },
+            {
+              "port": 4567,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "unknown",
+              "version": null
+            },
+            {
+              "port": 5678,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "unknown",
+              "version": null
+            },
+            {
+              "port": 9876,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "unknown",
+              "version": null
+            }
+          ],
+          "execution_time_seconds": 180.45813035104635,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "comprehensive",
+        "httpx_mode": "full",
+        "nmap_mode": "full",
+        "reason": "Custom + standard = need full identification!"
+      },
+      "rewards": {
+        "optimal": 750,
+        "suboptimal": 530
+      }
+    }
+  ]
+}

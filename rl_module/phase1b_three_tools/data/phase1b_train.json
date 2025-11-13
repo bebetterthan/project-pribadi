@@ -1,0 +1,4498 @@
+{
+  "version": "1.0",
+  "generated_at": "2025-11-13T04:56:18.463174",
+  "total_scenarios": 20,
+  "scenarios": [
+    {
+      "id": "phase1b_web_startup",
+      "name": "Modern Web Startup",
+      "description": "SaaS startup with microservices on standard web ports",
+      "target": "startup.example.com",
+      "complexity": "medium",
+      "scenario_type": "web_startup",
+      "metadata": {
+        "total_subdomains": 18,
+        "live_endpoints": 14,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          80,
+          443,
+          3000,
+          8080
+        ],
+        "technologies": [
+          "React",
+          "Node.js",
+          "Express.js",
+          "Nginx",
+          "Docker"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "startup.example.com",
+          "subdomains": [
+            "admin.startup.example.com",
+            "app.startup.example.com",
+            "assets.startup.example.com",
+            "auth.startup.example.com",
+            "blog.startup.example.com",
+            "cdn.startup.example.com",
+            "checkout.startup.example.com",
+            "dashboard.startup.example.com",
+            "dev.startup.example.com",
+            "login.startup.example.com",
+            "manage.startup.example.com",
+            "media.startup.example.com",
+            "panel.startup.example.com",
+            "portal.startup.example.com",
+            "prod.startup.example.com",
+            "store.startup.example.com",
+            "web.startup.example.com",
+            "www.startup.example.com"
+          ],
+          "total_found": 18,
+          "execution_time_seconds": 23.40464528528634,
+          "sources_used": 11
+        },
+        "httpx": {
+          "total_checked": 18,
+          "live_endpoints": 14,
+          "endpoints": [
+            {
+              "url": "https://dev.startup.example.com:443",
+              "status_code": 200,
+              "title": "Page on dev.startup.example.com",
+              "tech_stack": [
+                "Node.js",
+                "Express.js",
+                "React"
+              ],
+              "response_time_ms": 94,
+              "content_length": 2912
+            },
+            {
+              "url": "https://assets.startup.example.com:80",
+              "status_code": 301,
+              "title": "Page on assets.startup.example.com",
+              "tech_stack": [
+                "Nginx",
+                "Node.js",
+                "Docker"
+              ],
+              "response_time_ms": 213,
+              "content_length": 9322
+            },
+            {
+              "url": "https://store.startup.example.com:443",
+              "status_code": 200,
+              "title": "Page on store.startup.example.com",
+              "tech_stack": [
+                "Nginx",
+                "Express.js",
+                "Docker"
+              ],
+              "response_time_ms": 161,
+              "content_length": 10179
+            },
+            {
+              "url": "https://prod.startup.example.com:3000",
+              "status_code": 301,
+              "title": "Page on prod.startup.example.com",
+              "tech_stack": [
+                "Node.js",
+                "React",
+                "Nginx"
+              ],
+              "response_time_ms": 206,
+              "content_length": 11222
+            },
+            {
+              "url": "https://web.startup.example.com:80",
+              "status_code": 200,
+              "title": "Page on web.startup.example.com",
+              "tech_stack": [
+                "React",
+                "Nginx",
+                "Express.js"
+              ],
+              "response_time_ms": 61,
+              "content_length": 6441
+            },
+            {
+              "url": "https://login.startup.example.com:8080",
+              "status_code": 200,
+              "title": "Page on login.startup.example.com",
+              "tech_stack": [
+                "Nginx",
+                "Docker",
+                "Node.js"
+              ],
+              "response_time_ms": 158,
+              "content_length": 2039
+            },
+            {
+              "url": "https://manage.startup.example.com:3000",
+              "status_code": 200,
+              "title": "Page on manage.startup.example.com",
+              "tech_stack": [
+                "Docker",
+                "React",
+                "Nginx"
+              ],
+              "response_time_ms": 486,
+              "content_length": 38395
+            },
+            {
+              "url": "https://dashboard.startup.example.com:8080",
+              "status_code": 403,
+              "title": "Page on dashboard.startup.example.com",
+              "tech_stack": [
+                "Express.js",
+                "Docker",
+                "Nginx"
+              ],
+              "response_time_ms": 172,
+              "content_length": 13467
+            },
+            {
+              "url": "https://www.startup.example.com:443",
+              "status_code": 200,
+              "title": "Page on www.startup.example.com",
+              "tech_stack": [
+                "Express.js",
+                "Nginx",
+                "React"
+              ],
+              "response_time_ms": 235,
+              "content_length": 38379
+            },
+            {
+              "url": "https://checkout.startup.example.com:3000",
+              "status_code": 200,
+              "title": "Page on checkout.startup.example.com",
+              "tech_stack": [
+                "React",
+                "Nginx",
+                "Node.js"
+              ],
+              "response_time_ms": 284,
+              "content_length": 37614
+            },
+            {
+              "url": "https://cdn.startup.example.com:8080",
+              "status_code": 200,
+              "title": "Page on cdn.startup.example.com",
+              "tech_stack": [
+                "Express.js",
+                "React",
+                "Docker"
+              ],
+              "response_time_ms": 291,
+              "content_length": 4288
+            },
+            {
+              "url": "https://panel.startup.example.com:443",
+              "status_code": 301,
+              "title": "Page on panel.startup.example.com",
+              "tech_stack": [
+                "Express.js",
+                "Node.js",
+                "Docker"
+              ],
+              "response_time_ms": 438,
+              "content_length": 33040
+            },
+            {
+              "url": "https://admin.startup.example.com:443",
+              "status_code": 302,
+              "title": "Page on admin.startup.example.com",
+              "tech_stack": [
+                "React",
+                "Docker",
+                "Nginx"
+              ],
+              "response_time_ms": 122,
+              "content_length": 29742
+            },
+            {
+              "url": "https://media.startup.example.com:80",
+              "status_code": 200,
+              "title": "Page on media.startup.example.com",
+              "tech_stack": [
+                "Docker",
+                "React",
+                "Express.js"
+              ],
+              "response_time_ms": 247,
+              "content_length": 14703
+            }
+          ],
+          "execution_time_seconds": 50.43245452421735
+        },
+        "nmap": {
+          "target": "startup.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 4,
+          "services": [
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.22.1"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.24.0"
+            },
+            {
+              "port": 3000,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": null
+            },
+            {
+              "port": 8080,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http-proxy",
+              "version": "1.20.2"
+            }
+          ],
+          "execution_time_seconds": 253.94179481844634,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "comprehensive",
+        "httpx_mode": "full",
+        "nmap_mode": "skip",
+        "reason": "Pure web stack, no infra services. Nmap wastes time."
+      },
+      "rewards": {
+        "optimal": 480,
+        "suboptimal": 320
+      }
+    },
+    {
+      "id": "phase1b_cdn_ecommerce",
+      "name": "CDN-Heavy E-commerce",
+      "description": "E-commerce site behind Cloudflare, minimal exposed services",
+      "target": "shop.example.com",
+      "complexity": "low",
+      "scenario_type": "web_cdn",
+      "metadata": {
+        "total_subdomains": 12,
+        "live_endpoints": 10,
+        "open_ports": 1,
+        "critical_services": 0,
+        "port_list": [
+          443
+        ],
+        "technologies": [
+          "Cloudflare",
+          "WordPress",
+          "WooCommerce",
+          "Nginx"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "shop.example.com",
+          "subdomains": [
+            "api.shop.example.com",
+            "assets.shop.example.com",
+            "cdn.shop.example.com",
+            "dev.shop.example.com",
+            "manage.shop.example.com",
+            "payment.shop.example.com",
+            "portal.shop.example.com",
+            "shop.shop.example.com",
+            "static.shop.example.com",
+            "store.shop.example.com",
+            "web.shop.example.com",
+            "www.shop.example.com"
+          ],
+          "total_found": 12,
+          "execution_time_seconds": 15.310156065369771,
+          "sources_used": 11
+        },
+        "httpx": {
+          "total_checked": 12,
+          "live_endpoints": 10,
+          "endpoints": [
+            {
+              "url": "https://dev.shop.example.com:443",
+              "status_code": 200,
+              "title": "Page on dev.shop.example.com",
+              "tech_stack": [
+                "WooCommerce",
+                "Cloudflare",
+                "Nginx"
+              ],
+              "response_time_ms": 89,
+              "content_length": 18115
+            },
+            {
+              "url": "https://portal.shop.example.com:443",
+              "status_code": 200,
+              "title": "Page on portal.shop.example.com",
+              "tech_stack": [
+                "WordPress",
+                "Cloudflare",
+                "WooCommerce"
+              ],
+              "response_time_ms": 151,
+              "content_length": 23221
+            },
+            {
+              "url": "https://static.shop.example.com:443",
+              "status_code": 301,
+              "title": "Page on static.shop.example.com",
+              "tech_stack": [
+                "Cloudflare",
+                "Nginx",
+                "WooCommerce"
+              ],
+              "response_time_ms": 386,
+              "content_length": 12896
+            },
+            {
+              "url": "https://assets.shop.example.com:443",
+              "status_code": 301,
+              "title": "Page on assets.shop.example.com",
+              "tech_stack": [
+                "WooCommerce",
+                "Cloudflare",
+                "WordPress"
+              ],
+              "response_time_ms": 432,
+              "content_length": 3007
+            },
+            {
+              "url": "https://www.shop.example.com:443",
+              "status_code": 403,
+              "title": "Page on www.shop.example.com",
+              "tech_stack": [
+                "Cloudflare",
+                "WooCommerce",
+                "Nginx"
+              ],
+              "response_time_ms": 126,
+              "content_length": 2813
+            },
+            {
+              "url": "https://web.shop.example.com:443",
+              "status_code": 200,
+              "title": "Page on web.shop.example.com",
+              "tech_stack": [
+                "Cloudflare",
+                "Nginx",
+                "WordPress"
+              ],
+              "response_time_ms": 368,
+              "content_length": 27790
+            },
+            {
+              "url": "https://store.shop.example.com:443",
+              "status_code": 200,
+              "title": "Page on store.shop.example.com",
+              "tech_stack": [
+                "Cloudflare",
+                "Nginx",
+                "WordPress"
+              ],
+              "response_time_ms": 206,
+              "content_length": 29185
+            },
+            {
+              "url": "https://api.shop.example.com:443",
+              "status_code": 200,
+              "title": "Page on api.shop.example.com",
+              "tech_stack": [
+                "WordPress",
+                "Cloudflare",
+                "WooCommerce"
+              ],
+              "response_time_ms": 278,
+              "content_length": 47811
+            },
+            {
+              "url": "https://payment.shop.example.com:443",
+              "status_code": 200,
+              "title": "Page on payment.shop.example.com",
+              "tech_stack": [
+                "WordPress",
+                "WooCommerce",
+                "Cloudflare"
+              ],
+              "response_time_ms": 180,
+              "content_length": 2986
+            },
+            {
+              "url": "https://cdn.shop.example.com:443",
+              "status_code": 200,
+              "title": "Page on cdn.shop.example.com",
+              "tech_stack": [
+                "WordPress",
+                "Cloudflare",
+                "Nginx"
+              ],
+              "response_time_ms": 316,
+              "content_length": 12783
+            }
+          ],
+          "execution_time_seconds": 42.60432669231089
+        },
+        "nmap": {
+          "target": "shop.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 1,
+          "services": [
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.24.0"
+            }
+          ],
+          "execution_time_seconds": 136.07011226311676,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "active",
+        "httpx_mode": "detailed",
+        "nmap_mode": "skip",
+        "reason": "Only HTTPS behind CDN. Nmap gives no value."
+      },
+      "rewards": {
+        "optimal": 420,
+        "suboptimal": 280
+      }
+    },
+    {
+      "id": "phase1b_api_gateway",
+      "name": "API Gateway Architecture",
+      "description": "Microservices behind API gateway, RESTful APIs",
+      "target": "api.example.com",
+      "complexity": "medium",
+      "scenario_type": "web_api",
+      "metadata": {
+        "total_subdomains": 15,
+        "live_endpoints": 12,
+        "open_ports": 2,
+        "critical_services": 0,
+        "port_list": [
+          443,
+          8080
+        ],
+        "technologies": [
+          "Kong",
+          "Express.js",
+          "GraphQL",
+          "Node.js",
+          "Docker"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "api.example.com",
+          "subdomains": [
+            "admin.api.example.com",
+            "api.api.example.com",
+            "app.api.example.com",
+            "auth.api.example.com",
+            "cdn.api.example.com",
+            "checkout.api.example.com",
+            "dev.api.example.com",
+            "login.api.example.com",
+            "manage.api.example.com",
+            "panel.api.example.com",
+            "payment.api.example.com",
+            "prod.api.example.com",
+            "shop.api.example.com",
+            "staging.api.example.com",
+            "web.api.example.com"
+          ],
+          "total_found": 15,
+          "execution_time_seconds": 20.390326134444074,
+          "sources_used": 7
+        },
+        "httpx": {
+          "total_checked": 15,
+          "live_endpoints": 12,
+          "endpoints": [
+            {
+              "url": "https://login.api.example.com:443",
+              "status_code": 200,
+              "title": "Page on login.api.example.com",
+              "tech_stack": [
+                "GraphQL",
+                "Node.js",
+                "Kong"
+              ],
+              "response_time_ms": 267,
+              "content_length": 21970
+            },
+            {
+              "url": "https://app.api.example.com:8080",
+              "status_code": 200,
+              "title": "Page on app.api.example.com",
+              "tech_stack": [
+                "GraphQL",
+                "Express.js",
+                "Kong"
+              ],
+              "response_time_ms": 269,
+              "content_length": 28401
+            },
+            {
+              "url": "https://payment.api.example.com:443",
+              "status_code": 200,
+              "title": "Page on payment.api.example.com",
+              "tech_stack": [
+                "Node.js",
+                "Kong",
+                "GraphQL"
+              ],
+              "response_time_ms": 380,
+              "content_length": 32511
+            },
+            {
+              "url": "https://panel.api.example.com:8080",
+              "status_code": 302,
+              "title": "Page on panel.api.example.com",
+              "tech_stack": [
+                "GraphQL",
+                "Node.js",
+                "Docker"
+              ],
+              "response_time_ms": 356,
+              "content_length": 8035
+            },
+            {
+              "url": "https://staging.api.example.com:8080",
+              "status_code": 200,
+              "title": "Page on staging.api.example.com",
+              "tech_stack": [
+                "Express.js",
+                "Kong",
+                "Node.js"
+              ],
+              "response_time_ms": 227,
+              "content_length": 20957
+            },
+            {
+              "url": "https://dev.api.example.com:443",
+              "status_code": 200,
+              "title": "Page on dev.api.example.com",
+              "tech_stack": [
+                "Docker",
+                "GraphQL",
+                "Kong"
+              ],
+              "response_time_ms": 77,
+              "content_length": 41356
+            },
+            {
+              "url": "https://api.api.example.com:443",
+              "status_code": 302,
+              "title": "Page on api.api.example.com",
+              "tech_stack": [
+                "Express.js",
+                "GraphQL",
+                "Node.js"
+              ],
+              "response_time_ms": 97,
+              "content_length": 28096
+            },
+            {
+              "url": "https://web.api.example.com:443",
+              "status_code": 200,
+              "title": "Page on web.api.example.com",
+              "tech_stack": [
+                "Node.js",
+                "Kong",
+                "GraphQL"
+              ],
+              "response_time_ms": 452,
+              "content_length": 41413
+            },
+            {
+              "url": "https://prod.api.example.com:8080",
+              "status_code": 200,
+              "title": "Page on prod.api.example.com",
+              "tech_stack": [
+                "Express.js",
+                "Node.js",
+                "Docker"
+              ],
+              "response_time_ms": 350,
+              "content_length": 7646
+            },
+            {
+              "url": "https://manage.api.example.com:8080",
+              "status_code": 403,
+              "title": "Page on manage.api.example.com",
+              "tech_stack": [
+                "Node.js",
+                "Kong",
+                "Express.js"
+              ],
+              "response_time_ms": 308,
+              "content_length": 35083
+            },
+            {
+              "url": "https://checkout.api.example.com:8080",
+              "status_code": 200,
+              "title": "Page on checkout.api.example.com",
+              "tech_stack": [
+                "Express.js",
+                "Kong",
+                "Docker"
+              ],
+              "response_time_ms": 131,
+              "content_length": 9802
+            },
+            {
+              "url": "https://admin.api.example.com:443",
+              "status_code": 403,
+              "title": "Page on admin.api.example.com",
+              "tech_stack": [
+                "Kong",
+                "Express.js",
+                "Docker"
+              ],
+              "response_time_ms": 177,
+              "content_length": 14009
+            }
+          ],
+          "execution_time_seconds": 20.371225633337126
+        },
+        "nmap": {
+          "target": "api.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 2,
+          "services": [
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.22.1"
+            },
+            {
+              "port": 8080,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http-proxy",
+              "version": "1.20.2"
+            }
+          ],
+          "execution_time_seconds": 116.31575886315721,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "comprehensive",
+        "httpx_mode": "full",
+        "nmap_mode": "skip",
+        "reason": "API-only, no backend services exposed."
+      },
+      "rewards": {
+        "optimal": 490,
+        "suboptimal": 330
+      }
+    },
+    {
+      "id": "phase1b_load_balanced",
+      "name": "Load Balanced Web Farm",
+      "description": "Multiple web servers behind load balancer",
+      "target": "web.example.com",
+      "complexity": "high",
+      "scenario_type": "web_loadbalanced",
+      "metadata": {
+        "total_subdomains": 22,
+        "live_endpoints": 19,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          80,
+          443,
+          8080,
+          8443
+        ],
+        "technologies": [
+          "HAProxy",
+          "Apache",
+          "Nginx",
+          "PHP",
+          "Laravel"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "web.example.com",
+          "subdomains": [
+            "admin.web.example.com",
+            "api.web.example.com",
+            "app.web.example.com",
+            "assets.web.example.com",
+            "blog.web.example.com",
+            "cdn.web.example.com",
+            "checkout.web.example.com",
+            "dashboard.web.example.com",
+            "dev.web.example.com",
+            "login.web.example.com",
+            "manage.web.example.com",
+            "media.web.example.com",
+            "panel.web.example.com",
+            "payment.web.example.com",
+            "portal.web.example.com",
+            "prod.web.example.com",
+            "shop.web.example.com",
+            "staging.web.example.com",
+            "static.web.example.com",
+            "store.web.example.com",
+            "web.web.example.com",
+            "www.web.example.com"
+          ],
+          "total_found": 22,
+          "execution_time_seconds": 14.031702849335774,
+          "sources_used": 8
+        },
+        "httpx": {
+          "total_checked": 22,
+          "live_endpoints": 19,
+          "endpoints": [
+            {
+              "url": "https://store.web.example.com:443",
+              "status_code": 200,
+              "title": "Page on store.web.example.com",
+              "tech_stack": [
+                "PHP",
+                "HAProxy",
+                "Nginx"
+              ],
+              "response_time_ms": 299,
+              "content_length": 36454
+            },
+            {
+              "url": "https://dashboard.web.example.com:80",
+              "status_code": 301,
+              "title": "Page on dashboard.web.example.com",
+              "tech_stack": [
+                "Apache",
+                "PHP",
+                "HAProxy"
+              ],
+              "response_time_ms": 335,
+              "content_length": 17684
+            },
+            {
+              "url": "https://static.web.example.com:8080",
+              "status_code": 403,
+              "title": "Page on static.web.example.com",
+              "tech_stack": [
+                "Laravel",
+                "HAProxy",
+                "Apache"
+              ],
+              "response_time_ms": 429,
+              "content_length": 21942
+            },
+            {
+              "url": "https://panel.web.example.com:80",
+              "status_code": 301,
+              "title": "Page on panel.web.example.com",
+              "tech_stack": [
+                "Laravel",
+                "Apache",
+                "HAProxy"
+              ],
+              "response_time_ms": 111,
+              "content_length": 14980
+            },
+            {
+              "url": "https://media.web.example.com:8080",
+              "status_code": 302,
+              "title": "Page on media.web.example.com",
+              "tech_stack": [
+                "HAProxy",
+                "Nginx",
+                "Laravel"
+              ],
+              "response_time_ms": 403,
+              "content_length": 37988
+            },
+            {
+              "url": "https://app.web.example.com:443",
+              "status_code": 200,
+              "title": "Page on app.web.example.com",
+              "tech_stack": [
+                "HAProxy",
+                "Nginx",
+                "Laravel"
+              ],
+              "response_time_ms": 493,
+              "content_length": 33949
+            },
+            {
+              "url": "https://checkout.web.example.com:8443",
+              "status_code": 200,
+              "title": "Page on checkout.web.example.com",
+              "tech_stack": [
+                "Laravel",
+                "HAProxy",
+                "Nginx"
+              ],
+              "response_time_ms": 399,
+              "content_length": 47111
+            },
+            {
+              "url": "https://cdn.web.example.com:80",
+              "status_code": 403,
+              "title": "Page on cdn.web.example.com",
+              "tech_stack": [
+                "Nginx",
+                "HAProxy",
+                "Laravel"
+              ],
+              "response_time_ms": 204,
+              "content_length": 47654
+            },
+            {
+              "url": "https://manage.web.example.com:8443",
+              "status_code": 200,
+              "title": "Page on manage.web.example.com",
+              "tech_stack": [
+                "Apache",
+                "PHP",
+                "HAProxy"
+              ],
+              "response_time_ms": 471,
+              "content_length": 7609
+            },
+            {
+              "url": "https://payment.web.example.com:443",
+              "status_code": 301,
+              "title": "Page on payment.web.example.com",
+              "tech_stack": [
+                "HAProxy",
+                "Apache",
+                "PHP"
+              ],
+              "response_time_ms": 76,
+              "content_length": 4651
+            },
+            {
+              "url": "https://admin.web.example.com:80",
+              "status_code": 301,
+              "title": "Page on admin.web.example.com",
+              "tech_stack": [
+                "Laravel",
+                "Apache",
+                "Nginx"
+              ],
+              "response_time_ms": 444,
+              "content_length": 34024
+            },
+            {
+              "url": "https://dev.web.example.com:8080",
+              "status_code": 200,
+              "title": "Page on dev.web.example.com",
+              "tech_stack": [
+                "Laravel",
+                "Apache",
+                "HAProxy"
+              ],
+              "response_time_ms": 257,
+              "content_length": 9037
+            },
+            {
+              "url": "https://portal.web.example.com:443",
+              "status_code": 200,
+              "title": "Page on portal.web.example.com",
+              "tech_stack": [
+                "HAProxy",
+                "Nginx",
+                "Apache"
+              ],
+              "response_time_ms": 214,
+              "content_length": 4845
+            },
+            {
+              "url": "https://shop.web.example.com:443",
+              "status_code": 200,
+              "title": "Page on shop.web.example.com",
+              "tech_stack": [
+                "Laravel",
+                "Nginx",
+                "HAProxy"
+              ],
+              "response_time_ms": 495,
+              "content_length": 48506
+            },
+            {
+              "url": "https://web.web.example.com:8443",
+              "status_code": 301,
+              "title": "Page on web.web.example.com",
+              "tech_stack": [
+                "HAProxy",
+                "Apache",
+                "PHP"
+              ],
+              "response_time_ms": 398,
+              "content_length": 42584
+            },
+            {
+              "url": "https://assets.web.example.com:8443",
+              "status_code": 301,
+              "title": "Page on assets.web.example.com",
+              "tech_stack": [
+                "Laravel",
+                "Nginx",
+                "PHP"
+              ],
+              "response_time_ms": 447,
+              "content_length": 26284
+            },
+            {
+              "url": "https://staging.web.example.com:443",
+              "status_code": 200,
+              "title": "Page on staging.web.example.com",
+              "tech_stack": [
+                "Apache",
+                "PHP",
+                "Nginx"
+              ],
+              "response_time_ms": 317,
+              "content_length": 43817
+            },
+            {
+              "url": "https://login.web.example.com:80",
+              "status_code": 302,
+              "title": "Page on login.web.example.com",
+              "tech_stack": [
+                "HAProxy",
+                "Laravel",
+                "Apache"
+              ],
+              "response_time_ms": 107,
+              "content_length": 38644
+            },
+            {
+              "url": "https://blog.web.example.com:80",
+              "status_code": 200,
+              "title": "Page on blog.web.example.com",
+              "tech_stack": [
+                "Nginx",
+                "HAProxy",
+                "Apache"
+              ],
+              "response_time_ms": 182,
+              "content_length": 3335
+            }
+          ],
+          "execution_time_seconds": 11.277032713566694
+        },
+        "nmap": {
+          "target": "web.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 4,
+          "services": [
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.22.1"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.20.2"
+            },
+            {
+              "port": 8080,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http-proxy",
+              "version": "1.24.0"
+            },
+            {
+              "port": 8443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https-alt",
+              "version": "1.22.1"
+            }
+          ],
+          "execution_time_seconds": 161.5618122239301,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "comprehensive",
+        "httpx_mode": "full",
+        "nmap_mode": "skip",
+        "reason": "Load balancer + web servers only. No infra."
+      },
+      "rewards": {
+        "optimal": 510,
+        "suboptimal": 350
+      }
+    },
+    {
+      "id": "phase1b_dev_web",
+      "name": "Development Web Environment",
+      "description": "Development servers for frontend/backend testing",
+      "target": "dev.example.com",
+      "complexity": "medium",
+      "scenario_type": "web_dev",
+      "metadata": {
+        "total_subdomains": 16,
+        "live_endpoints": 11,
+        "open_ports": 3,
+        "critical_services": 0,
+        "port_list": [
+          3000,
+          8080,
+          8081
+        ],
+        "technologies": [
+          "Vite",
+          "Webpack",
+          "Express.js",
+          "React",
+          "Vue.js"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "dev.example.com",
+          "subdomains": [
+            "admin.dev.example.com",
+            "api.dev.example.com",
+            "app.dev.example.com",
+            "assets.dev.example.com",
+            "auth.dev.example.com",
+            "blog.dev.example.com",
+            "cdn.dev.example.com",
+            "checkout.dev.example.com",
+            "dev.dev.example.com",
+            "payment.dev.example.com",
+            "prod.dev.example.com",
+            "staging.dev.example.com",
+            "static.dev.example.com",
+            "store.dev.example.com",
+            "web.dev.example.com",
+            "www.dev.example.com"
+          ],
+          "total_found": 16,
+          "execution_time_seconds": 24.030602361537824,
+          "sources_used": 15
+        },
+        "httpx": {
+          "total_checked": 16,
+          "live_endpoints": 11,
+          "endpoints": [
+            {
+              "url": "https://store.dev.example.com:8080",
+              "status_code": 200,
+              "title": "Page on store.dev.example.com",
+              "tech_stack": [
+                "Express.js",
+                "Vite",
+                "React"
+              ],
+              "response_time_ms": 200,
+              "content_length": 44956
+            },
+            {
+              "url": "https://web.dev.example.com:8080",
+              "status_code": 301,
+              "title": "Page on web.dev.example.com",
+              "tech_stack": [
+                "React",
+                "Vite",
+                "Webpack"
+              ],
+              "response_time_ms": 184,
+              "content_length": 29572
+            },
+            {
+              "url": "https://static.dev.example.com:8080",
+              "status_code": 200,
+              "title": "Page on static.dev.example.com",
+              "tech_stack": [
+                "Express.js",
+                "Vite",
+                "React"
+              ],
+              "response_time_ms": 333,
+              "content_length": 21684
+            },
+            {
+              "url": "https://cdn.dev.example.com:8080",
+              "status_code": 302,
+              "title": "Page on cdn.dev.example.com",
+              "tech_stack": [
+                "Vue.js",
+                "Webpack",
+                "Express.js"
+              ],
+              "response_time_ms": 458,
+              "content_length": 23743
+            },
+            {
+              "url": "https://app.dev.example.com:8081",
+              "status_code": 200,
+              "title": "Page on app.dev.example.com",
+              "tech_stack": [
+                "Express.js",
+                "Webpack",
+                "Vue.js"
+              ],
+              "response_time_ms": 137,
+              "content_length": 34166
+            },
+            {
+              "url": "https://auth.dev.example.com:3000",
+              "status_code": 302,
+              "title": "Page on auth.dev.example.com",
+              "tech_stack": [
+                "Vue.js",
+                "Vite",
+                "Webpack"
+              ],
+              "response_time_ms": 276,
+              "content_length": 43964
+            },
+            {
+              "url": "https://staging.dev.example.com:3000",
+              "status_code": 301,
+              "title": "Page on staging.dev.example.com",
+              "tech_stack": [
+                "Express.js",
+                "React",
+                "Vite"
+              ],
+              "response_time_ms": 141,
+              "content_length": 13603
+            },
+            {
+              "url": "https://checkout.dev.example.com:3000",
+              "status_code": 302,
+              "title": "Page on checkout.dev.example.com",
+              "tech_stack": [
+                "Vue.js",
+                "Express.js",
+                "Webpack"
+              ],
+              "response_time_ms": 450,
+              "content_length": 18290
+            },
+            {
+              "url": "https://blog.dev.example.com:3000",
+              "status_code": 403,
+              "title": "Page on blog.dev.example.com",
+              "tech_stack": [
+                "Webpack",
+                "Vite",
+                "React"
+              ],
+              "response_time_ms": 376,
+              "content_length": 8186
+            },
+            {
+              "url": "https://payment.dev.example.com:8081",
+              "status_code": 302,
+              "title": "Page on payment.dev.example.com",
+              "tech_stack": [
+                "Webpack",
+                "React",
+                "Express.js"
+              ],
+              "response_time_ms": 306,
+              "content_length": 22500
+            },
+            {
+              "url": "https://api.dev.example.com:3000",
+              "status_code": 200,
+              "title": "Page on api.dev.example.com",
+              "tech_stack": [
+                "Webpack",
+                "Vite",
+                "Vue.js"
+              ],
+              "response_time_ms": 442,
+              "content_length": 20578
+            }
+          ],
+          "execution_time_seconds": 20.080338209150767
+        },
+        "nmap": {
+          "target": "dev.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 3,
+          "services": [
+            {
+              "port": 3000,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": null
+            },
+            {
+              "port": 8080,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http-proxy",
+              "version": "1.24.0"
+            },
+            {
+              "port": 8081,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http-alt",
+              "version": null
+            }
+          ],
+          "execution_time_seconds": 226.413489199535,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "active",
+        "httpx_mode": "thorough",
+        "nmap_mode": "skip",
+        "reason": "Dev servers, all web-based. No databases exposed."
+      },
+      "rewards": {
+        "optimal": 450,
+        "suboptimal": 310
+      }
+    },
+    {
+      "id": "phase1b_database_cluster",
+      "name": "Database Server Cluster",
+      "description": "Production database servers with multiple DB types",
+      "target": "db.example.com",
+      "complexity": "very_high",
+      "scenario_type": "infra_database",
+      "metadata": {
+        "total_subdomains": 8,
+        "live_endpoints": 5,
+        "open_ports": 6,
+        "critical_services": 4,
+        "port_list": [
+          80,
+          443,
+          3306,
+          5432,
+          6379,
+          27017
+        ],
+        "technologies": [
+          "MySQL",
+          "PostgreSQL",
+          "Redis",
+          "MongoDB",
+          "phpMyAdmin"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "db.example.com",
+          "subdomains": [
+            "backup.db.example.com",
+            "imap.db.example.com",
+            "mail.db.example.com",
+            "metrics.db.example.com",
+            "monitoring.db.example.com",
+            "postgres.db.example.com",
+            "redis.db.example.com",
+            "smtp.db.example.com"
+          ],
+          "total_found": 8,
+          "execution_time_seconds": 16.121692346711686,
+          "sources_used": 5
+        },
+        "httpx": {
+          "total_checked": 8,
+          "live_endpoints": 5,
+          "endpoints": [
+            {
+              "url": "https://mail.db.example.com:80",
+              "status_code": 403,
+              "title": "Page on mail.db.example.com",
+              "tech_stack": [
+                "Redis",
+                "MongoDB",
+                "PostgreSQL"
+              ],
+              "response_time_ms": 448,
+              "content_length": 42132
+            },
+            {
+              "url": "https://postgres.db.example.com:443",
+              "status_code": 200,
+              "title": "Page on postgres.db.example.com",
+              "tech_stack": [
+                "PostgreSQL",
+                "MySQL",
+                "phpMyAdmin"
+              ],
+              "response_time_ms": 74,
+              "content_length": 35070
+            },
+            {
+              "url": "https://redis.db.example.com:443",
+              "status_code": 301,
+              "title": "Page on redis.db.example.com",
+              "tech_stack": [
+                "Redis",
+                "MySQL",
+                "PostgreSQL"
+              ],
+              "response_time_ms": 389,
+              "content_length": 25232
+            },
+            {
+              "url": "https://metrics.db.example.com:80",
+              "status_code": 200,
+              "title": "Page on metrics.db.example.com",
+              "tech_stack": [
+                "phpMyAdmin",
+                "MongoDB",
+                "Redis"
+              ],
+              "response_time_ms": 169,
+              "content_length": 10526
+            },
+            {
+              "url": "https://backup.db.example.com:80",
+              "status_code": 200,
+              "title": "Page on backup.db.example.com",
+              "tech_stack": [
+                "MongoDB",
+                "Redis",
+                "PostgreSQL"
+              ],
+              "response_time_ms": 166,
+              "content_length": 46175
+            }
+          ],
+          "execution_time_seconds": 12.245873523527493
+        },
+        "nmap": {
+          "target": "db.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 6,
+          "services": [
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.24.0"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.24.0"
+            },
+            {
+              "port": 3306,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "mysql",
+              "version": "5.7.42",
+              "extra_info": "unauthorized access possible"
+            },
+            {
+              "port": 5432,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "postgresql",
+              "version": "13.10",
+              "extra_info": "unauthorized access possible"
+            },
+            {
+              "port": 6379,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "redis",
+              "version": "7.0.8",
+              "extra_info": "unauthorized access possible"
+            },
+            {
+              "port": 27017,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "mongod",
+              "version": "4.4.19",
+              "extra_info": "unauthorized access possible"
+            }
+          ],
+          "execution_time_seconds": 295.6629463743432,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "active",
+        "httpx_mode": "basic",
+        "nmap_mode": "service",
+        "reason": "CRITICAL: Need service versions for all databases!"
+      },
+      "rewards": {
+        "optimal": 820,
+        "suboptimal": 320
+      }
+    },
+    {
+      "id": "phase1b_mail_server",
+      "name": "Mail Server Infrastructure",
+      "description": "Enterprise mail server with SMTP/IMAP/POP3",
+      "target": "mail.example.com",
+      "complexity": "high",
+      "scenario_type": "infra_mail",
+      "metadata": {
+        "total_subdomains": 6,
+        "live_endpoints": 2,
+        "open_ports": 5,
+        "critical_services": 0,
+        "port_list": [
+          25,
+          143,
+          587,
+          993,
+          995
+        ],
+        "technologies": [
+          "Postfix",
+          "Dovecot",
+          "SpamAssassin",
+          "ClamAV"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "mail.example.com",
+          "subdomains": [
+            "backup.mail.example.com",
+            "ftp.mail.example.com",
+            "mail.mail.example.com",
+            "mongo.mail.example.com",
+            "pop3.mail.example.com",
+            "vpn.mail.example.com"
+          ],
+          "total_found": 6,
+          "execution_time_seconds": 24.858785600146785,
+          "sources_used": 12
+        },
+        "httpx": {
+          "total_checked": 6,
+          "live_endpoints": 2,
+          "endpoints": [
+            {
+              "url": "https://mail.mail.example.com:443",
+              "status_code": 403,
+              "title": "Page on mail.mail.example.com",
+              "tech_stack": [
+                "Postfix",
+                "ClamAV",
+                "SpamAssassin"
+              ],
+              "response_time_ms": 408,
+              "content_length": 24020
+            },
+            {
+              "url": "https://pop3.mail.example.com:443",
+              "status_code": 200,
+              "title": "Page on pop3.mail.example.com",
+              "tech_stack": [
+                "SpamAssassin",
+                "Dovecot",
+                "ClamAV"
+              ],
+              "response_time_ms": 255,
+              "content_length": 46253
+            }
+          ],
+          "execution_time_seconds": 48.83436983248608
+        },
+        "nmap": {
+          "target": "mail.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 5,
+          "services": [
+            {
+              "port": 25,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "smtp",
+              "version": "3.5.13"
+            },
+            {
+              "port": 143,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "imap",
+              "version": "2.3.16"
+            },
+            {
+              "port": 587,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "smtp",
+              "version": "3.5.13"
+            },
+            {
+              "port": 993,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "imaps",
+              "version": "2.3.19"
+            },
+            {
+              "port": 995,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "pop3s",
+              "version": "2.3.16"
+            }
+          ],
+          "execution_time_seconds": 114.51069102199723,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "passive",
+        "httpx_mode": "quick",
+        "nmap_mode": "full",
+        "reason": "Mail services NEED version detection for vulnerabilities."
+      },
+      "rewards": {
+        "optimal": 780,
+        "suboptimal": 290
+      }
+    },
+    {
+      "id": "phase1b_ssh_infra",
+      "name": "SSH Infrastructure",
+      "description": "Server farm with SSH access and backend services",
+      "target": "infra.example.com",
+      "complexity": "high",
+      "scenario_type": "infra_ssh",
+      "metadata": {
+        "total_subdomains": 10,
+        "live_endpoints": 7,
+        "open_ports": 5,
+        "critical_services": 3,
+        "port_list": [
+          22,
+          80,
+          443,
+          3306,
+          6379
+        ],
+        "technologies": [
+          "OpenSSH",
+          "MySQL",
+          "Redis",
+          "Ubuntu",
+          "Nginx"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "infra.example.com",
+          "subdomains": [
+            "ftp.infra.example.com",
+            "imap.infra.example.com",
+            "metrics.infra.example.com",
+            "mongo.infra.example.com",
+            "postgres.infra.example.com",
+            "redis.infra.example.com",
+            "sftp.infra.example.com",
+            "smtp.infra.example.com",
+            "ssh.infra.example.com",
+            "webmail.infra.example.com"
+          ],
+          "total_found": 10,
+          "execution_time_seconds": 12.321187516005413,
+          "sources_used": 12
+        },
+        "httpx": {
+          "total_checked": 10,
+          "live_endpoints": 7,
+          "endpoints": [
+            {
+              "url": "https://imap.infra.example.com:443",
+              "status_code": 301,
+              "title": "Page on imap.infra.example.com",
+              "tech_stack": [
+                "Nginx",
+                "Ubuntu",
+                "OpenSSH"
+              ],
+              "response_time_ms": 391,
+              "content_length": 36534
+            },
+            {
+              "url": "https://postgres.infra.example.com:443",
+              "status_code": 302,
+              "title": "Page on postgres.infra.example.com",
+              "tech_stack": [
+                "Nginx",
+                "MySQL",
+                "OpenSSH"
+              ],
+              "response_time_ms": 427,
+              "content_length": 35601
+            },
+            {
+              "url": "https://ftp.infra.example.com:443",
+              "status_code": 200,
+              "title": "Page on ftp.infra.example.com",
+              "tech_stack": [
+                "Nginx",
+                "Redis",
+                "Ubuntu"
+              ],
+              "response_time_ms": 496,
+              "content_length": 29114
+            },
+            {
+              "url": "https://webmail.infra.example.com:443",
+              "status_code": 403,
+              "title": "Page on webmail.infra.example.com",
+              "tech_stack": [
+                "Redis",
+                "Nginx",
+                "OpenSSH"
+              ],
+              "response_time_ms": 291,
+              "content_length": 21769
+            },
+            {
+              "url": "https://ssh.infra.example.com:443",
+              "status_code": 200,
+              "title": "Page on ssh.infra.example.com",
+              "tech_stack": [
+                "MySQL",
+                "Ubuntu",
+                "OpenSSH"
+              ],
+              "response_time_ms": 122,
+              "content_length": 20552
+            },
+            {
+              "url": "https://metrics.infra.example.com:443",
+              "status_code": 200,
+              "title": "Page on metrics.infra.example.com",
+              "tech_stack": [
+                "Ubuntu",
+                "Redis",
+                "MySQL"
+              ],
+              "response_time_ms": 167,
+              "content_length": 8777
+            },
+            {
+              "url": "https://smtp.infra.example.com:443",
+              "status_code": 403,
+              "title": "Page on smtp.infra.example.com",
+              "tech_stack": [
+                "Ubuntu",
+                "Nginx",
+                "MySQL"
+              ],
+              "response_time_ms": 193,
+              "content_length": 13182
+            }
+          ],
+          "execution_time_seconds": 23.081496610127246
+        },
+        "nmap": {
+          "target": "infra.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 5,
+          "services": [
+            {
+              "port": 22,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "ssh",
+              "version": "8.2p1",
+              "extra_info": "protocol 2.0"
+            },
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.22.1"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.20.2"
+            },
+            {
+              "port": 3306,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "mysql",
+              "version": "8.0.32",
+              "extra_info": "unauthorized access possible"
+            },
+            {
+              "port": 6379,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "redis",
+              "version": "7.0.8",
+              "extra_info": "unauthorized access possible"
+            }
+          ],
+          "execution_time_seconds": 49.667918551546364,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "comprehensive",
+        "httpx_mode": "thorough",
+        "nmap_mode": "service",
+        "reason": "SSH + databases = need version info!"
+      },
+      "rewards": {
+        "optimal": 850,
+        "suboptimal": 340
+      }
+    },
+    {
+      "id": "phase1b_enterprise_windows",
+      "name": "Enterprise Windows Domain",
+      "description": "Windows AD environment with RDP/SMB/MSSQL",
+      "target": "corp.example.com",
+      "complexity": "very_high",
+      "scenario_type": "infra_windows",
+      "metadata": {
+        "total_subdomains": 12,
+        "live_endpoints": 10,
+        "open_ports": 5,
+        "critical_services": 1,
+        "port_list": [
+          80,
+          443,
+          445,
+          1433,
+          3389
+        ],
+        "technologies": [
+          "Windows Server",
+          "Active Directory",
+          "MSSQL",
+          "IIS"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "corp.example.com",
+          "subdomains": [
+            "backup.corp.example.com",
+            "cache.corp.example.com",
+            "ftp.corp.example.com",
+            "imap.corp.example.com",
+            "logs.corp.example.com",
+            "mail.corp.example.com",
+            "monitoring.corp.example.com",
+            "redis.corp.example.com",
+            "sftp.corp.example.com",
+            "smtp.corp.example.com",
+            "ssh.corp.example.com",
+            "webmail.corp.example.com"
+          ],
+          "total_found": 12,
+          "execution_time_seconds": 10.78140960240946,
+          "sources_used": 12
+        },
+        "httpx": {
+          "total_checked": 12,
+          "live_endpoints": 10,
+          "endpoints": [
+            {
+              "url": "https://logs.corp.example.com:443",
+              "status_code": 302,
+              "title": "Page on logs.corp.example.com",
+              "tech_stack": [
+                "Windows Server",
+                "MSSQL",
+                "Active Directory"
+              ],
+              "response_time_ms": 208,
+              "content_length": 40070
+            },
+            {
+              "url": "https://webmail.corp.example.com:443",
+              "status_code": 200,
+              "title": "Page on webmail.corp.example.com",
+              "tech_stack": [
+                "Active Directory",
+                "Windows Server",
+                "MSSQL"
+              ],
+              "response_time_ms": 461,
+              "content_length": 28474
+            },
+            {
+              "url": "https://sftp.corp.example.com:80",
+              "status_code": 403,
+              "title": "Page on sftp.corp.example.com",
+              "tech_stack": [
+                "Active Directory",
+                "MSSQL",
+                "Windows Server"
+              ],
+              "response_time_ms": 488,
+              "content_length": 7557
+            },
+            {
+              "url": "https://ssh.corp.example.com:443",
+              "status_code": 200,
+              "title": "Page on ssh.corp.example.com",
+              "tech_stack": [
+                "Active Directory",
+                "Windows Server",
+                "IIS"
+              ],
+              "response_time_ms": 191,
+              "content_length": 39174
+            },
+            {
+              "url": "https://redis.corp.example.com:80",
+              "status_code": 200,
+              "title": "Page on redis.corp.example.com",
+              "tech_stack": [
+                "Windows Server",
+                "MSSQL",
+                "IIS"
+              ],
+              "response_time_ms": 235,
+              "content_length": 7547
+            },
+            {
+              "url": "https://ftp.corp.example.com:80",
+              "status_code": 403,
+              "title": "Page on ftp.corp.example.com",
+              "tech_stack": [
+                "Active Directory",
+                "IIS",
+                "Windows Server"
+              ],
+              "response_time_ms": 429,
+              "content_length": 27108
+            },
+            {
+              "url": "https://monitoring.corp.example.com:80",
+              "status_code": 200,
+              "title": "Page on monitoring.corp.example.com",
+              "tech_stack": [
+                "IIS",
+                "Windows Server",
+                "MSSQL"
+              ],
+              "response_time_ms": 341,
+              "content_length": 47417
+            },
+            {
+              "url": "https://mail.corp.example.com:80",
+              "status_code": 200,
+              "title": "Page on mail.corp.example.com",
+              "tech_stack": [
+                "Active Directory",
+                "Windows Server",
+                "IIS"
+              ],
+              "response_time_ms": 59,
+              "content_length": 39395
+            },
+            {
+              "url": "https://backup.corp.example.com:443",
+              "status_code": 302,
+              "title": "Page on backup.corp.example.com",
+              "tech_stack": [
+                "Windows Server",
+                "Active Directory",
+                "IIS"
+              ],
+              "response_time_ms": 456,
+              "content_length": 25610
+            },
+            {
+              "url": "https://cache.corp.example.com:80",
+              "status_code": 200,
+              "title": "Page on cache.corp.example.com",
+              "tech_stack": [
+                "Active Directory",
+                "Windows Server",
+                "MSSQL"
+              ],
+              "response_time_ms": 304,
+              "content_length": 31586
+            }
+          ],
+          "execution_time_seconds": 11.091117119993518
+        },
+        "nmap": {
+          "target": "corp.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 5,
+          "services": [
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.20.2"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.22.1"
+            },
+            {
+              "port": 445,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "microsoft-ds",
+              "version": null
+            },
+            {
+              "port": 1433,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "ms-sql-s",
+              "version": "2019 RTM"
+            },
+            {
+              "port": 3389,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "ms-wbt-server",
+              "version": null
+            }
+          ],
+          "execution_time_seconds": 273.08004504395103,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "comprehensive",
+        "httpx_mode": "full",
+        "nmap_mode": "service",
+        "reason": "Windows infrastructure = CRITICAL service detection!"
+      },
+      "rewards": {
+        "optimal": 880,
+        "suboptimal": 350
+      }
+    },
+    {
+      "id": "phase1b_dev_infra",
+      "name": "Development Infrastructure",
+      "description": "Dev servers with databases and CI/CD",
+      "target": "dev-infra.example.com",
+      "complexity": "high",
+      "scenario_type": "infra_dev",
+      "metadata": {
+        "total_subdomains": 14,
+        "live_endpoints": 10,
+        "open_ports": 6,
+        "critical_services": 2,
+        "port_list": [
+          22,
+          80,
+          443,
+          5432,
+          8080,
+          9000
+        ],
+        "technologies": [
+          "Jenkins",
+          "PostgreSQL",
+          "Docker",
+          "GitLab",
+          "Nginx"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "dev-infra.example.com",
+          "subdomains": [
+            "database.dev-infra.example.com",
+            "db.dev-infra.example.com",
+            "ftp.dev-infra.example.com",
+            "imap.dev-infra.example.com",
+            "mail.dev-infra.example.com",
+            "metrics.dev-infra.example.com",
+            "mongo.dev-infra.example.com",
+            "monitoring.dev-infra.example.com",
+            "pop3.dev-infra.example.com",
+            "redis.dev-infra.example.com",
+            "sftp.dev-infra.example.com",
+            "smtp.dev-infra.example.com",
+            "vpn.dev-infra.example.com",
+            "webmail.dev-infra.example.com"
+          ],
+          "total_found": 14,
+          "execution_time_seconds": 20.014693779173534,
+          "sources_used": 6
+        },
+        "httpx": {
+          "total_checked": 14,
+          "live_endpoints": 10,
+          "endpoints": [
+            {
+              "url": "https://database.dev-infra.example.com:443",
+              "status_code": 302,
+              "title": "Page on database.dev-infra.example.com",
+              "tech_stack": [
+                "GitLab",
+                "Docker",
+                "Nginx"
+              ],
+              "response_time_ms": 445,
+              "content_length": 35177
+            },
+            {
+              "url": "https://mail.dev-infra.example.com:80",
+              "status_code": 403,
+              "title": "Page on mail.dev-infra.example.com",
+              "tech_stack": [
+                "PostgreSQL",
+                "GitLab",
+                "Jenkins"
+              ],
+              "response_time_ms": 389,
+              "content_length": 30662
+            },
+            {
+              "url": "https://mongo.dev-infra.example.com:443",
+              "status_code": 403,
+              "title": "Page on mongo.dev-infra.example.com",
+              "tech_stack": [
+                "GitLab",
+                "Jenkins",
+                "Nginx"
+              ],
+              "response_time_ms": 118,
+              "content_length": 33821
+            },
+            {
+              "url": "https://webmail.dev-infra.example.com:8080",
+              "status_code": 301,
+              "title": "Page on webmail.dev-infra.example.com",
+              "tech_stack": [
+                "Docker",
+                "Jenkins",
+                "Nginx"
+              ],
+              "response_time_ms": 379,
+              "content_length": 27315
+            },
+            {
+              "url": "https://db.dev-infra.example.com:80",
+              "status_code": 200,
+              "title": "Page on db.dev-infra.example.com",
+              "tech_stack": [
+                "Docker",
+                "GitLab",
+                "PostgreSQL"
+              ],
+              "response_time_ms": 314,
+              "content_length": 2806
+            },
+            {
+              "url": "https://pop3.dev-infra.example.com:443",
+              "status_code": 200,
+              "title": "Page on pop3.dev-infra.example.com",
+              "tech_stack": [
+                "Jenkins",
+                "Docker",
+                "Nginx"
+              ],
+              "response_time_ms": 341,
+              "content_length": 11676
+            },
+            {
+              "url": "https://sftp.dev-infra.example.com:80",
+              "status_code": 302,
+              "title": "Page on sftp.dev-infra.example.com",
+              "tech_stack": [
+                "PostgreSQL",
+                "GitLab",
+                "Nginx"
+              ],
+              "response_time_ms": 381,
+              "content_length": 34309
+            },
+            {
+              "url": "https://metrics.dev-infra.example.com:8080",
+              "status_code": 200,
+              "title": "Page on metrics.dev-infra.example.com",
+              "tech_stack": [
+                "Docker",
+                "Jenkins",
+                "PostgreSQL"
+              ],
+              "response_time_ms": 408,
+              "content_length": 44304
+            },
+            {
+              "url": "https://smtp.dev-infra.example.com:443",
+              "status_code": 200,
+              "title": "Page on smtp.dev-infra.example.com",
+              "tech_stack": [
+                "PostgreSQL",
+                "Docker",
+                "GitLab"
+              ],
+              "response_time_ms": 132,
+              "content_length": 9580
+            },
+            {
+              "url": "https://imap.dev-infra.example.com:8080",
+              "status_code": 403,
+              "title": "Page on imap.dev-infra.example.com",
+              "tech_stack": [
+                "Jenkins",
+                "PostgreSQL",
+                "Nginx"
+              ],
+              "response_time_ms": 240,
+              "content_length": 38265
+            }
+          ],
+          "execution_time_seconds": 24.691987102270193
+        },
+        "nmap": {
+          "target": "dev-infra.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 6,
+          "services": [
+            {
+              "port": 22,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "ssh",
+              "version": "8.9p1",
+              "extra_info": "protocol 2.0"
+            },
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.24.0"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.20.2"
+            },
+            {
+              "port": 5432,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "postgresql",
+              "version": "15.2",
+              "extra_info": "unauthorized access possible"
+            },
+            {
+              "port": 8080,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http-proxy",
+              "version": "1.22.1"
+            },
+            {
+              "port": 9000,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "2.361.4"
+            }
+          ],
+          "execution_time_seconds": 183.81066295852227,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "comprehensive",
+        "httpx_mode": "full",
+        "nmap_mode": "full",
+        "reason": "Mix of CI/CD + databases = need full scan!"
+      },
+      "rewards": {
+        "optimal": 790,
+        "suboptimal": 330
+      }
+    },
+    {
+      "id": "phase1b_admin_infra",
+      "name": "Admin Panel Infrastructure",
+      "description": "Admin interfaces and control panels",
+      "target": "admin.example.com",
+      "complexity": "high",
+      "scenario_type": "infra_admin",
+      "metadata": {
+        "total_subdomains": 9,
+        "live_endpoints": 6,
+        "open_ports": 5,
+        "critical_services": 0,
+        "port_list": [
+          80,
+          443,
+          8080,
+          8443,
+          9090
+        ],
+        "technologies": [
+          "Tomcat",
+          "cPanel",
+          "Webmin",
+          "phpMyAdmin",
+          "Apache"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "admin.example.com",
+          "subdomains": [
+            "backup.admin.example.com",
+            "db.admin.example.com",
+            "ftp.admin.example.com",
+            "logs.admin.example.com",
+            "mail.admin.example.com",
+            "monitoring.admin.example.com",
+            "postgres.admin.example.com",
+            "redis.admin.example.com",
+            "smtp.admin.example.com"
+          ],
+          "total_found": 9,
+          "execution_time_seconds": 28.56244421087951,
+          "sources_used": 13
+        },
+        "httpx": {
+          "total_checked": 9,
+          "live_endpoints": 6,
+          "endpoints": [
+            {
+              "url": "https://db.admin.example.com:8080",
+              "status_code": 403,
+              "title": "Page on db.admin.example.com",
+              "tech_stack": [
+                "Apache",
+                "cPanel",
+                "phpMyAdmin"
+              ],
+              "response_time_ms": 309,
+              "content_length": 28915
+            },
+            {
+              "url": "https://logs.admin.example.com:8443",
+              "status_code": 301,
+              "title": "Page on logs.admin.example.com",
+              "tech_stack": [
+                "cPanel",
+                "Apache",
+                "phpMyAdmin"
+              ],
+              "response_time_ms": 199,
+              "content_length": 24817
+            },
+            {
+              "url": "https://postgres.admin.example.com:443",
+              "status_code": 302,
+              "title": "Page on postgres.admin.example.com",
+              "tech_stack": [
+                "cPanel",
+                "Tomcat",
+                "Apache"
+              ],
+              "response_time_ms": 233,
+              "content_length": 44670
+            },
+            {
+              "url": "https://mail.admin.example.com:80",
+              "status_code": 403,
+              "title": "Page on mail.admin.example.com",
+              "tech_stack": [
+                "Webmin",
+                "phpMyAdmin",
+                "cPanel"
+              ],
+              "response_time_ms": 321,
+              "content_length": 40217
+            },
+            {
+              "url": "https://ftp.admin.example.com:8080",
+              "status_code": 200,
+              "title": "Page on ftp.admin.example.com",
+              "tech_stack": [
+                "cPanel",
+                "phpMyAdmin",
+                "Apache"
+              ],
+              "response_time_ms": 244,
+              "content_length": 49949
+            },
+            {
+              "url": "https://monitoring.admin.example.com:443",
+              "status_code": 302,
+              "title": "Page on monitoring.admin.example.com",
+              "tech_stack": [
+                "Apache",
+                "phpMyAdmin",
+                "Webmin"
+              ],
+              "response_time_ms": 88,
+              "content_length": 12004
+            }
+          ],
+          "execution_time_seconds": 57.07313201309463
+        },
+        "nmap": {
+          "target": "admin.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 5,
+          "services": [
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.22.1"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.20.2"
+            },
+            {
+              "port": 8080,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http-proxy",
+              "version": "1.22.1"
+            },
+            {
+              "port": 8443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https-alt",
+              "version": "1.24.0"
+            },
+            {
+              "port": 9090,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "2.40.7"
+            }
+          ],
+          "execution_time_seconds": 145.77426197948586,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "active",
+        "httpx_mode": "thorough",
+        "nmap_mode": "full",
+        "reason": "Admin panels = need to identify management software versions!"
+      },
+      "rewards": {
+        "optimal": 760,
+        "suboptimal": 310
+      }
+    },
+    {
+      "id": "phase1b_monitoring",
+      "name": "Monitoring Stack",
+      "description": "Prometheus/Grafana/ELK monitoring infrastructure",
+      "target": "monitor.example.com",
+      "complexity": "very_high",
+      "scenario_type": "infra_monitoring",
+      "metadata": {
+        "total_subdomains": 11,
+        "live_endpoints": 8,
+        "open_ports": 7,
+        "critical_services": 0,
+        "port_list": [
+          80,
+          443,
+          3000,
+          9090,
+          9093,
+          9200,
+          5601
+        ],
+        "technologies": [
+          "Prometheus",
+          "Grafana",
+          "Elasticsearch",
+          "Kibana",
+          "Alertmanager"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "monitor.example.com",
+          "subdomains": [
+            "backup.monitor.example.com",
+            "database.monitor.example.com",
+            "db.monitor.example.com",
+            "logs.monitor.example.com",
+            "mongo.monitor.example.com",
+            "mysql.monitor.example.com",
+            "postgres.monitor.example.com",
+            "smtp.monitor.example.com",
+            "ssh.monitor.example.com",
+            "vpn.monitor.example.com",
+            "webmail.monitor.example.com"
+          ],
+          "total_found": 11,
+          "execution_time_seconds": 29.71875449867299,
+          "sources_used": 12
+        },
+        "httpx": {
+          "total_checked": 11,
+          "live_endpoints": 8,
+          "endpoints": [
+            {
+              "url": "https://smtp.monitor.example.com:80",
+              "status_code": 200,
+              "title": "Page on smtp.monitor.example.com",
+              "tech_stack": [
+                "Kibana",
+                "Grafana",
+                "Elasticsearch"
+              ],
+              "response_time_ms": 371,
+              "content_length": 7487
+            },
+            {
+              "url": "https://postgres.monitor.example.com:80",
+              "status_code": 200,
+              "title": "Page on postgres.monitor.example.com",
+              "tech_stack": [
+                "Prometheus",
+                "Kibana",
+                "Alertmanager"
+              ],
+              "response_time_ms": 370,
+              "content_length": 9151
+            },
+            {
+              "url": "https://backup.monitor.example.com:443",
+              "status_code": 200,
+              "title": "Page on backup.monitor.example.com",
+              "tech_stack": [
+                "Alertmanager",
+                "Grafana",
+                "Kibana"
+              ],
+              "response_time_ms": 323,
+              "content_length": 14931
+            },
+            {
+              "url": "https://database.monitor.example.com:80",
+              "status_code": 301,
+              "title": "Page on database.monitor.example.com",
+              "tech_stack": [
+                "Grafana",
+                "Prometheus",
+                "Kibana"
+              ],
+              "response_time_ms": 196,
+              "content_length": 21408
+            },
+            {
+              "url": "https://ssh.monitor.example.com:443",
+              "status_code": 301,
+              "title": "Page on ssh.monitor.example.com",
+              "tech_stack": [
+                "Grafana",
+                "Prometheus",
+                "Kibana"
+              ],
+              "response_time_ms": 348,
+              "content_length": 18662
+            },
+            {
+              "url": "https://mysql.monitor.example.com:80",
+              "status_code": 403,
+              "title": "Page on mysql.monitor.example.com",
+              "tech_stack": [
+                "Grafana",
+                "Elasticsearch",
+                "Alertmanager"
+              ],
+              "response_time_ms": 393,
+              "content_length": 33461
+            },
+            {
+              "url": "https://db.monitor.example.com:443",
+              "status_code": 302,
+              "title": "Page on db.monitor.example.com",
+              "tech_stack": [
+                "Prometheus",
+                "Alertmanager",
+                "Elasticsearch"
+              ],
+              "response_time_ms": 161,
+              "content_length": 40234
+            },
+            {
+              "url": "https://webmail.monitor.example.com:3000",
+              "status_code": 200,
+              "title": "Page on webmail.monitor.example.com",
+              "tech_stack": [
+                "Prometheus",
+                "Grafana",
+                "Kibana"
+              ],
+              "response_time_ms": 337,
+              "content_length": 19500
+            }
+          ],
+          "execution_time_seconds": 54.261430770464884
+        },
+        "nmap": {
+          "target": "monitor.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 7,
+          "services": [
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.20.2"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.24.0"
+            },
+            {
+              "port": 3000,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": null
+            },
+            {
+              "port": 9090,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "2.35.0"
+            },
+            {
+              "port": 9093,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": null
+            },
+            {
+              "port": 9200,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "8.5.3"
+            },
+            {
+              "port": 5601,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "unknown",
+              "version": null
+            }
+          ],
+          "execution_time_seconds": 251.1853986782867,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "comprehensive",
+        "httpx_mode": "full",
+        "nmap_mode": "service",
+        "reason": "Monitoring stack = CRITICAL to identify versions!"
+      },
+      "rewards": {
+        "optimal": 840,
+        "suboptimal": 340
+      }
+    },
+    {
+      "id": "phase1b_full_stack",
+      "name": "Full Stack Infrastructure",
+      "description": "Complete infrastructure with all services",
+      "target": "full.example.com",
+      "complexity": "very_high",
+      "scenario_type": "infra_fullstack",
+      "metadata": {
+        "total_subdomains": 20,
+        "live_endpoints": 15,
+        "open_ports": 8,
+        "critical_services": 4,
+        "port_list": [
+          22,
+          80,
+          443,
+          3306,
+          5432,
+          6379,
+          8080,
+          9000
+        ],
+        "technologies": [
+          "Full Stack",
+          "MySQL",
+          "PostgreSQL",
+          "Redis",
+          "Jenkins",
+          "Nginx"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "full.example.com",
+          "subdomains": [
+            "backup.full.example.com",
+            "cache.full.example.com",
+            "database.full.example.com",
+            "db.full.example.com",
+            "ftp.full.example.com",
+            "imap.full.example.com",
+            "logs.full.example.com",
+            "mail.full.example.com",
+            "metrics.full.example.com",
+            "mongo.full.example.com",
+            "monitoring.full.example.com",
+            "mysql.full.example.com",
+            "pop3.full.example.com",
+            "postgres.full.example.com",
+            "redis.full.example.com",
+            "sftp.full.example.com",
+            "smtp.full.example.com",
+            "ssh.full.example.com",
+            "vpn.full.example.com",
+            "webmail.full.example.com"
+          ],
+          "total_found": 20,
+          "execution_time_seconds": 6.649729924027393,
+          "sources_used": 7
+        },
+        "httpx": {
+          "total_checked": 20,
+          "live_endpoints": 15,
+          "endpoints": [
+            {
+              "url": "https://pop3.full.example.com:443",
+              "status_code": 200,
+              "title": "Page on pop3.full.example.com",
+              "tech_stack": [
+                "PostgreSQL",
+                "Nginx",
+                "Full Stack"
+              ],
+              "response_time_ms": 134,
+              "content_length": 8029
+            },
+            {
+              "url": "https://backup.full.example.com:8080",
+              "status_code": 200,
+              "title": "Page on backup.full.example.com",
+              "tech_stack": [
+                "Redis",
+                "PostgreSQL",
+                "Nginx"
+              ],
+              "response_time_ms": 67,
+              "content_length": 2161
+            },
+            {
+              "url": "https://metrics.full.example.com:80",
+              "status_code": 200,
+              "title": "Page on metrics.full.example.com",
+              "tech_stack": [
+                "PostgreSQL",
+                "MySQL",
+                "Redis"
+              ],
+              "response_time_ms": 59,
+              "content_length": 16173
+            },
+            {
+              "url": "https://smtp.full.example.com:443",
+              "status_code": 302,
+              "title": "Page on smtp.full.example.com",
+              "tech_stack": [
+                "Full Stack",
+                "Jenkins",
+                "Redis"
+              ],
+              "response_time_ms": 215,
+              "content_length": 2589
+            },
+            {
+              "url": "https://mongo.full.example.com:80",
+              "status_code": 200,
+              "title": "Page on mongo.full.example.com",
+              "tech_stack": [
+                "Redis",
+                "Jenkins",
+                "Full Stack"
+              ],
+              "response_time_ms": 266,
+              "content_length": 31132
+            },
+            {
+              "url": "https://mysql.full.example.com:443",
+              "status_code": 403,
+              "title": "Page on mysql.full.example.com",
+              "tech_stack": [
+                "PostgreSQL",
+                "Nginx",
+                "Redis"
+              ],
+              "response_time_ms": 184,
+              "content_length": 48921
+            },
+            {
+              "url": "https://cache.full.example.com:443",
+              "status_code": 200,
+              "title": "Page on cache.full.example.com",
+              "tech_stack": [
+                "Redis",
+                "Full Stack",
+                "PostgreSQL"
+              ],
+              "response_time_ms": 304,
+              "content_length": 22302
+            },
+            {
+              "url": "https://database.full.example.com:8080",
+              "status_code": 301,
+              "title": "Page on database.full.example.com",
+              "tech_stack": [
+                "Jenkins",
+                "PostgreSQL",
+                "MySQL"
+              ],
+              "response_time_ms": 270,
+              "content_length": 30590
+            },
+            {
+              "url": "https://sftp.full.example.com:80",
+              "status_code": 302,
+              "title": "Page on sftp.full.example.com",
+              "tech_stack": [
+                "Jenkins",
+                "Nginx",
+                "Full Stack"
+              ],
+              "response_time_ms": 125,
+              "content_length": 12569
+            },
+            {
+              "url": "https://redis.full.example.com:8080",
+              "status_code": 403,
+              "title": "Page on redis.full.example.com",
+              "tech_stack": [
+                "Redis",
+                "Nginx",
+                "Jenkins"
+              ],
+              "response_time_ms": 190,
+              "content_length": 4579
+            },
+            {
+              "url": "https://ftp.full.example.com:8080",
+              "status_code": 403,
+              "title": "Page on ftp.full.example.com",
+              "tech_stack": [
+                "Jenkins",
+                "PostgreSQL",
+                "Redis"
+              ],
+              "response_time_ms": 220,
+              "content_length": 36700
+            },
+            {
+              "url": "https://postgres.full.example.com:443",
+              "status_code": 200,
+              "title": "Page on postgres.full.example.com",
+              "tech_stack": [
+                "PostgreSQL",
+                "Jenkins",
+                "Nginx"
+              ],
+              "response_time_ms": 295,
+              "content_length": 21587
+            },
+            {
+              "url": "https://webmail.full.example.com:80",
+              "status_code": 301,
+              "title": "Page on webmail.full.example.com",
+              "tech_stack": [
+                "Redis",
+                "MySQL",
+                "Nginx"
+              ],
+              "response_time_ms": 493,
+              "content_length": 2659
+            },
+            {
+              "url": "https://imap.full.example.com:80",
+              "status_code": 200,
+              "title": "Page on imap.full.example.com",
+              "tech_stack": [
+                "PostgreSQL",
+                "MySQL",
+                "Full Stack"
+              ],
+              "response_time_ms": 61,
+              "content_length": 31455
+            },
+            {
+              "url": "https://vpn.full.example.com:443",
+              "status_code": 403,
+              "title": "Page on vpn.full.example.com",
+              "tech_stack": [
+                "MySQL",
+                "Nginx",
+                "Full Stack"
+              ],
+              "response_time_ms": 471,
+              "content_length": 24695
+            }
+          ],
+          "execution_time_seconds": 43.134838785275136
+        },
+        "nmap": {
+          "target": "full.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 8,
+          "services": [
+            {
+              "port": 22,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "ssh",
+              "version": "8.9p1",
+              "extra_info": "protocol 2.0"
+            },
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.20.2"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.22.1"
+            },
+            {
+              "port": 3306,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "mysql",
+              "version": "5.7.42",
+              "extra_info": "unauthorized access possible"
+            },
+            {
+              "port": 5432,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "postgresql",
+              "version": "13.10",
+              "extra_info": "unauthorized access possible"
+            },
+            {
+              "port": 6379,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "redis",
+              "version": "6.2.11",
+              "extra_info": "unauthorized access possible"
+            },
+            {
+              "port": 8080,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http-proxy",
+              "version": "1.24.0"
+            },
+            {
+              "port": 9000,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "2.375.3"
+            }
+          ],
+          "execution_time_seconds": 136.14725861778805,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "comprehensive",
+        "httpx_mode": "full",
+        "nmap_mode": "service",
+        "reason": "Everything exposed = MUST scan everything!"
+      },
+      "rewards": {
+        "optimal": 920,
+        "suboptimal": 380
+      }
+    },
+    {
+      "id": "phase1b_web_monitoring",
+      "name": "Web + Monitoring",
+      "description": "Web application with Prometheus monitoring",
+      "target": "webapp-mon.example.com",
+      "complexity": "medium",
+      "scenario_type": "hybrid_web_monitoring",
+      "metadata": {
+        "total_subdomains": 13,
+        "live_endpoints": 11,
+        "open_ports": 3,
+        "critical_services": 0,
+        "port_list": [
+          80,
+          443,
+          9090
+        ],
+        "technologies": [
+          "React",
+          "Express.js",
+          "Prometheus",
+          "Nginx"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "webapp-mon.example.com",
+          "subdomains": [
+            "auth.webapp-mon.example.com",
+            "blog.webapp-mon.example.com",
+            "dashboard.webapp-mon.example.com",
+            "dev.webapp-mon.example.com",
+            "manage.webapp-mon.example.com",
+            "media.webapp-mon.example.com",
+            "payment.webapp-mon.example.com",
+            "portal.webapp-mon.example.com",
+            "staging.webapp-mon.example.com",
+            "static.webapp-mon.example.com",
+            "store.webapp-mon.example.com",
+            "web.webapp-mon.example.com",
+            "www.webapp-mon.example.com"
+          ],
+          "total_found": 13,
+          "execution_time_seconds": 5.811499416458927,
+          "sources_used": 11
+        },
+        "httpx": {
+          "total_checked": 13,
+          "live_endpoints": 11,
+          "endpoints": [
+            {
+              "url": "https://www.webapp-mon.example.com:80",
+              "status_code": 301,
+              "title": "Page on www.webapp-mon.example.com",
+              "tech_stack": [
+                "Express.js",
+                "React",
+                "Nginx"
+              ],
+              "response_time_ms": 120,
+              "content_length": 12930
+            },
+            {
+              "url": "https://static.webapp-mon.example.com:80",
+              "status_code": 302,
+              "title": "Page on static.webapp-mon.example.com",
+              "tech_stack": [
+                "Express.js",
+                "Prometheus",
+                "React"
+              ],
+              "response_time_ms": 241,
+              "content_length": 24885
+            },
+            {
+              "url": "https://web.webapp-mon.example.com:443",
+              "status_code": 302,
+              "title": "Page on web.webapp-mon.example.com",
+              "tech_stack": [
+                "Nginx",
+                "React",
+                "Express.js"
+              ],
+              "response_time_ms": 341,
+              "content_length": 44477
+            },
+            {
+              "url": "https://portal.webapp-mon.example.com:443",
+              "status_code": 301,
+              "title": "Page on portal.webapp-mon.example.com",
+              "tech_stack": [
+                "Prometheus",
+                "React",
+                "Nginx"
+              ],
+              "response_time_ms": 236,
+              "content_length": 5209
+            },
+            {
+              "url": "https://media.webapp-mon.example.com:80",
+              "status_code": 403,
+              "title": "Page on media.webapp-mon.example.com",
+              "tech_stack": [
+                "Prometheus",
+                "Express.js",
+                "React"
+              ],
+              "response_time_ms": 224,
+              "content_length": 12106
+            },
+            {
+              "url": "https://payment.webapp-mon.example.com:443",
+              "status_code": 302,
+              "title": "Page on payment.webapp-mon.example.com",
+              "tech_stack": [
+                "Prometheus",
+                "Nginx",
+                "React"
+              ],
+              "response_time_ms": 318,
+              "content_length": 18546
+            },
+            {
+              "url": "https://dashboard.webapp-mon.example.com:443",
+              "status_code": 302,
+              "title": "Page on dashboard.webapp-mon.example.com",
+              "tech_stack": [
+                "React",
+                "Nginx",
+                "Express.js"
+              ],
+              "response_time_ms": 108,
+              "content_length": 34135
+            },
+            {
+              "url": "https://blog.webapp-mon.example.com:443",
+              "status_code": 302,
+              "title": "Page on blog.webapp-mon.example.com",
+              "tech_stack": [
+                "Nginx",
+                "React",
+                "Prometheus"
+              ],
+              "response_time_ms": 319,
+              "content_length": 35930
+            },
+            {
+              "url": "https://store.webapp-mon.example.com:80",
+              "status_code": 200,
+              "title": "Page on store.webapp-mon.example.com",
+              "tech_stack": [
+                "Nginx",
+                "Express.js",
+                "Prometheus"
+              ],
+              "response_time_ms": 54,
+              "content_length": 47063
+            },
+            {
+              "url": "https://manage.webapp-mon.example.com:80",
+              "status_code": 302,
+              "title": "Page on manage.webapp-mon.example.com",
+              "tech_stack": [
+                "Prometheus",
+                "Nginx",
+                "Express.js"
+              ],
+              "response_time_ms": 488,
+              "content_length": 49443
+            },
+            {
+              "url": "https://staging.webapp-mon.example.com:80",
+              "status_code": 301,
+              "title": "Page on staging.webapp-mon.example.com",
+              "tech_stack": [
+                "Prometheus",
+                "React",
+                "Express.js"
+              ],
+              "response_time_ms": 499,
+              "content_length": 23207
+            }
+          ],
+          "execution_time_seconds": 34.406935193464165
+        },
+        "nmap": {
+          "target": "webapp-mon.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 3,
+          "services": [
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.24.0"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.22.1"
+            },
+            {
+              "port": 9090,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "2.38.0"
+            }
+          ],
+          "execution_time_seconds": 269.2791868803942,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "comprehensive",
+        "httpx_mode": "full",
+        "nmap_mode": "quick",
+        "reason": "Mostly web, but Prometheus worth quick check."
+      },
+      "rewards": {
+        "optimal": 580,
+        "suboptimal": 450
+      }
+    },
+    {
+      "id": "phase1b_web_database",
+      "name": "Web + Database",
+      "description": "Web application with exposed MySQL",
+      "target": "webapp-db.example.com",
+      "complexity": "high",
+      "scenario_type": "hybrid_web_database",
+      "metadata": {
+        "total_subdomains": 11,
+        "live_endpoints": 7,
+        "open_ports": 3,
+        "critical_services": 1,
+        "port_list": [
+          80,
+          443,
+          3306
+        ],
+        "technologies": [
+          "PHP",
+          "Laravel",
+          "MySQL",
+          "Apache"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "webapp-db.example.com",
+          "subdomains": [
+            "admin.webapp-db.example.com",
+            "api.webapp-db.example.com",
+            "app.webapp-db.example.com",
+            "auth.webapp-db.example.com",
+            "blog.webapp-db.example.com",
+            "cdn.webapp-db.example.com",
+            "login.webapp-db.example.com",
+            "media.webapp-db.example.com",
+            "payment.webapp-db.example.com",
+            "portal.webapp-db.example.com",
+            "web.webapp-db.example.com"
+          ],
+          "total_found": 11,
+          "execution_time_seconds": 19.71453889421811,
+          "sources_used": 15
+        },
+        "httpx": {
+          "total_checked": 11,
+          "live_endpoints": 7,
+          "endpoints": [
+            {
+              "url": "https://media.webapp-db.example.com:80",
+              "status_code": 302,
+              "title": "Page on media.webapp-db.example.com",
+              "tech_stack": [
+                "Laravel",
+                "Apache",
+                "MySQL"
+              ],
+              "response_time_ms": 215,
+              "content_length": 31444
+            },
+            {
+              "url": "https://admin.webapp-db.example.com:80",
+              "status_code": 302,
+              "title": "Page on admin.webapp-db.example.com",
+              "tech_stack": [
+                "MySQL",
+                "Laravel",
+                "PHP"
+              ],
+              "response_time_ms": 359,
+              "content_length": 30234
+            },
+            {
+              "url": "https://portal.webapp-db.example.com:443",
+              "status_code": 200,
+              "title": "Page on portal.webapp-db.example.com",
+              "tech_stack": [
+                "MySQL",
+                "Apache",
+                "Laravel"
+              ],
+              "response_time_ms": 271,
+              "content_length": 30508
+            },
+            {
+              "url": "https://payment.webapp-db.example.com:443",
+              "status_code": 200,
+              "title": "Page on payment.webapp-db.example.com",
+              "tech_stack": [
+                "MySQL",
+                "PHP",
+                "Laravel"
+              ],
+              "response_time_ms": 432,
+              "content_length": 4894
+            },
+            {
+              "url": "https://app.webapp-db.example.com:443",
+              "status_code": 200,
+              "title": "Page on app.webapp-db.example.com",
+              "tech_stack": [
+                "Apache",
+                "MySQL",
+                "PHP"
+              ],
+              "response_time_ms": 84,
+              "content_length": 4321
+            },
+            {
+              "url": "https://api.webapp-db.example.com:80",
+              "status_code": 301,
+              "title": "Page on api.webapp-db.example.com",
+              "tech_stack": [
+                "PHP",
+                "Apache",
+                "Laravel"
+              ],
+              "response_time_ms": 267,
+              "content_length": 6788
+            },
+            {
+              "url": "https://cdn.webapp-db.example.com:443",
+              "status_code": 200,
+              "title": "Page on cdn.webapp-db.example.com",
+              "tech_stack": [
+                "MySQL",
+                "Laravel",
+                "Apache"
+              ],
+              "response_time_ms": 297,
+              "content_length": 3440
+            }
+          ],
+          "execution_time_seconds": 29.24737709425302
+        },
+        "nmap": {
+          "target": "webapp-db.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 3,
+          "services": [
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.24.0"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.22.1"
+            },
+            {
+              "port": 3306,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "mysql",
+              "version": "8.0.32",
+              "extra_info": "unauthorized access possible"
+            }
+          ],
+          "execution_time_seconds": 190.7270054244712,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "active",
+        "httpx_mode": "thorough",
+        "nmap_mode": "thorough",
+        "reason": "MySQL exposed = worth thorough scan for version!"
+      },
+      "rewards": {
+        "optimal": 620,
+        "suboptimal": 480
+      }
+    },
+    {
+      "id": "phase1b_web_ssh",
+      "name": "Web + SSH",
+      "description": "Web servers with SSH management access",
+      "target": "webapp-ssh.example.com",
+      "complexity": "medium",
+      "scenario_type": "hybrid_web_ssh",
+      "metadata": {
+        "total_subdomains": 14,
+        "live_endpoints": 12,
+        "open_ports": 3,
+        "critical_services": 1,
+        "port_list": [
+          22,
+          80,
+          443
+        ],
+        "technologies": [
+          "Nginx",
+          "Django",
+          "OpenSSH",
+          "Python"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "webapp-ssh.example.com",
+          "subdomains": [
+            "admin.webapp-ssh.example.com",
+            "assets.webapp-ssh.example.com",
+            "auth.webapp-ssh.example.com",
+            "blog.webapp-ssh.example.com",
+            "checkout.webapp-ssh.example.com",
+            "dashboard.webapp-ssh.example.com",
+            "dev.webapp-ssh.example.com",
+            "login.webapp-ssh.example.com",
+            "media.webapp-ssh.example.com",
+            "panel.webapp-ssh.example.com",
+            "portal.webapp-ssh.example.com",
+            "prod.webapp-ssh.example.com",
+            "staging.webapp-ssh.example.com",
+            "web.webapp-ssh.example.com"
+          ],
+          "total_found": 14,
+          "execution_time_seconds": 13.870721374068635,
+          "sources_used": 7
+        },
+        "httpx": {
+          "total_checked": 14,
+          "live_endpoints": 12,
+          "endpoints": [
+            {
+              "url": "https://staging.webapp-ssh.example.com:80",
+              "status_code": 403,
+              "title": "Page on staging.webapp-ssh.example.com",
+              "tech_stack": [
+                "Django",
+                "OpenSSH",
+                "Python"
+              ],
+              "response_time_ms": 467,
+              "content_length": 12322
+            },
+            {
+              "url": "https://dashboard.webapp-ssh.example.com:80",
+              "status_code": 200,
+              "title": "Page on dashboard.webapp-ssh.example.com",
+              "tech_stack": [
+                "Nginx",
+                "Django",
+                "OpenSSH"
+              ],
+              "response_time_ms": 441,
+              "content_length": 19089
+            },
+            {
+              "url": "https://admin.webapp-ssh.example.com:443",
+              "status_code": 302,
+              "title": "Page on admin.webapp-ssh.example.com",
+              "tech_stack": [
+                "Nginx",
+                "OpenSSH",
+                "Python"
+              ],
+              "response_time_ms": 399,
+              "content_length": 7839
+            },
+            {
+              "url": "https://web.webapp-ssh.example.com:80",
+              "status_code": 403,
+              "title": "Page on web.webapp-ssh.example.com",
+              "tech_stack": [
+                "Nginx",
+                "Django",
+                "OpenSSH"
+              ],
+              "response_time_ms": 188,
+              "content_length": 4562
+            },
+            {
+              "url": "https://login.webapp-ssh.example.com:443",
+              "status_code": 200,
+              "title": "Page on login.webapp-ssh.example.com",
+              "tech_stack": [
+                "Python",
+                "OpenSSH",
+                "Nginx"
+              ],
+              "response_time_ms": 139,
+              "content_length": 8485
+            },
+            {
+              "url": "https://dev.webapp-ssh.example.com:80",
+              "status_code": 200,
+              "title": "Page on dev.webapp-ssh.example.com",
+              "tech_stack": [
+                "Django",
+                "Nginx",
+                "Python"
+              ],
+              "response_time_ms": 158,
+              "content_length": 28511
+            },
+            {
+              "url": "https://media.webapp-ssh.example.com:443",
+              "status_code": 200,
+              "title": "Page on media.webapp-ssh.example.com",
+              "tech_stack": [
+                "OpenSSH",
+                "Python",
+                "Django"
+              ],
+              "response_time_ms": 296,
+              "content_length": 44124
+            },
+            {
+              "url": "https://blog.webapp-ssh.example.com:443",
+              "status_code": 301,
+              "title": "Page on blog.webapp-ssh.example.com",
+              "tech_stack": [
+                "Python",
+                "OpenSSH",
+                "Django"
+              ],
+              "response_time_ms": 214,
+              "content_length": 30032
+            },
+            {
+              "url": "https://portal.webapp-ssh.example.com:80",
+              "status_code": 302,
+              "title": "Page on portal.webapp-ssh.example.com",
+              "tech_stack": [
+                "Python",
+                "Nginx",
+                "Django"
+              ],
+              "response_time_ms": 72,
+              "content_length": 15544
+            },
+            {
+              "url": "https://checkout.webapp-ssh.example.com:443",
+              "status_code": 200,
+              "title": "Page on checkout.webapp-ssh.example.com",
+              "tech_stack": [
+                "Nginx",
+                "OpenSSH",
+                "Python"
+              ],
+              "response_time_ms": 439,
+              "content_length": 29789
+            },
+            {
+              "url": "https://prod.webapp-ssh.example.com:443",
+              "status_code": 200,
+              "title": "Page on prod.webapp-ssh.example.com",
+              "tech_stack": [
+                "Nginx",
+                "Python",
+                "Django"
+              ],
+              "response_time_ms": 225,
+              "content_length": 28942
+            },
+            {
+              "url": "https://panel.webapp-ssh.example.com:80",
+              "status_code": 302,
+              "title": "Page on panel.webapp-ssh.example.com",
+              "tech_stack": [
+                "Django",
+                "Python",
+                "OpenSSH"
+              ],
+              "response_time_ms": 361,
+              "content_length": 43946
+            }
+          ],
+          "execution_time_seconds": 33.12645885126183
+        },
+        "nmap": {
+          "target": "webapp-ssh.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 3,
+          "services": [
+            {
+              "port": 22,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "ssh",
+              "version": "8.4p1",
+              "extra_info": "protocol 2.0"
+            },
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.20.2"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.22.1"
+            }
+          ],
+          "execution_time_seconds": 254.01231212318592,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "comprehensive",
+        "httpx_mode": "full",
+        "nmap_mode": "quick",
+        "reason": "Mostly web, SSH worth quick version check."
+      },
+      "rewards": {
+        "optimal": 560,
+        "suboptimal": 440
+      }
+    },
+    {
+      "id": "phase1b_web_redis",
+      "name": "Web + Redis Cache",
+      "description": "Web application with Redis caching layer",
+      "target": "webapp-cache.example.com",
+      "complexity": "medium",
+      "scenario_type": "hybrid_web_redis",
+      "metadata": {
+        "total_subdomains": 12,
+        "live_endpoints": 10,
+        "open_ports": 3,
+        "critical_services": 1,
+        "port_list": [
+          80,
+          443,
+          6379
+        ],
+        "technologies": [
+          "Node.js",
+          "Redis",
+          "React",
+          "Express.js"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "webapp-cache.example.com",
+          "subdomains": [
+            "assets.webapp-cache.example.com",
+            "auth.webapp-cache.example.com",
+            "blog.webapp-cache.example.com",
+            "checkout.webapp-cache.example.com",
+            "dev.webapp-cache.example.com",
+            "login.webapp-cache.example.com",
+            "media.webapp-cache.example.com",
+            "panel.webapp-cache.example.com",
+            "payment.webapp-cache.example.com",
+            "shop.webapp-cache.example.com",
+            "static.webapp-cache.example.com",
+            "store.webapp-cache.example.com"
+          ],
+          "total_found": 12,
+          "execution_time_seconds": 21.40497533572176,
+          "sources_used": 13
+        },
+        "httpx": {
+          "total_checked": 12,
+          "live_endpoints": 10,
+          "endpoints": [
+            {
+              "url": "https://panel.webapp-cache.example.com:80",
+              "status_code": 200,
+              "title": "Page on panel.webapp-cache.example.com",
+              "tech_stack": [
+                "Node.js",
+                "Express.js",
+                "Redis"
+              ],
+              "response_time_ms": 393,
+              "content_length": 18837
+            },
+            {
+              "url": "https://login.webapp-cache.example.com:443",
+              "status_code": 301,
+              "title": "Page on login.webapp-cache.example.com",
+              "tech_stack": [
+                "React",
+                "Express.js",
+                "Redis"
+              ],
+              "response_time_ms": 374,
+              "content_length": 37325
+            },
+            {
+              "url": "https://auth.webapp-cache.example.com:443",
+              "status_code": 200,
+              "title": "Page on auth.webapp-cache.example.com",
+              "tech_stack": [
+                "Express.js",
+                "React",
+                "Node.js"
+              ],
+              "response_time_ms": 116,
+              "content_length": 25099
+            },
+            {
+              "url": "https://payment.webapp-cache.example.com:443",
+              "status_code": 200,
+              "title": "Page on payment.webapp-cache.example.com",
+              "tech_stack": [
+                "Node.js",
+                "Express.js",
+                "React"
+              ],
+              "response_time_ms": 452,
+              "content_length": 17779
+            },
+            {
+              "url": "https://shop.webapp-cache.example.com:80",
+              "status_code": 403,
+              "title": "Page on shop.webapp-cache.example.com",
+              "tech_stack": [
+                "Express.js",
+                "Node.js",
+                "Redis"
+              ],
+              "response_time_ms": 185,
+              "content_length": 10161
+            },
+            {
+              "url": "https://assets.webapp-cache.example.com:80",
+              "status_code": 200,
+              "title": "Page on assets.webapp-cache.example.com",
+              "tech_stack": [
+                "Express.js",
+                "React",
+                "Redis"
+              ],
+              "response_time_ms": 215,
+              "content_length": 14600
+            },
+            {
+              "url": "https://checkout.webapp-cache.example.com:80",
+              "status_code": 301,
+              "title": "Page on checkout.webapp-cache.example.com",
+              "tech_stack": [
+                "Redis",
+                "Node.js",
+                "React"
+              ],
+              "response_time_ms": 168,
+              "content_length": 38933
+            },
+            {
+              "url": "https://media.webapp-cache.example.com:443",
+              "status_code": 200,
+              "title": "Page on media.webapp-cache.example.com",
+              "tech_stack": [
+                "Node.js",
+                "Express.js",
+                "Redis"
+              ],
+              "response_time_ms": 242,
+              "content_length": 32787
+            },
+            {
+              "url": "https://dev.webapp-cache.example.com:80",
+              "status_code": 403,
+              "title": "Page on dev.webapp-cache.example.com",
+              "tech_stack": [
+                "Node.js",
+                "Redis",
+                "React"
+              ],
+              "response_time_ms": 461,
+              "content_length": 37095
+            },
+            {
+              "url": "https://store.webapp-cache.example.com:443",
+              "status_code": 200,
+              "title": "Page on store.webapp-cache.example.com",
+              "tech_stack": [
+                "React",
+                "Redis",
+                "Node.js"
+              ],
+              "response_time_ms": 486,
+              "content_length": 16144
+            }
+          ],
+          "execution_time_seconds": 43.49298171716006
+        },
+        "nmap": {
+          "target": "webapp-cache.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 3,
+          "services": [
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.20.2"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.24.0"
+            },
+            {
+              "port": 6379,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "redis",
+              "version": "6.2.11",
+              "extra_info": "unauthorized access possible"
+            }
+          ],
+          "execution_time_seconds": 202.32429192934754,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "active",
+        "httpx_mode": "thorough",
+        "nmap_mode": "thorough",
+        "reason": "Redis exposed = worth checking version/config!"
+      },
+      "rewards": {
+        "optimal": 610,
+        "suboptimal": 470
+      }
+    },
+    {
+      "id": "phase1b_web_backends",
+      "name": "Web + Multiple Backend Services",
+      "description": "Web frontend with multiple backend microservices",
+      "target": "webapp-micro.example.com",
+      "complexity": "high",
+      "scenario_type": "hybrid_web_backends",
+      "metadata": {
+        "total_subdomains": 17,
+        "live_endpoints": 14,
+        "open_ports": 5,
+        "critical_services": 0,
+        "port_list": [
+          80,
+          443,
+          5000,
+          8080,
+          9000
+        ],
+        "technologies": [
+          "React",
+          "Flask",
+          "Go",
+          "Node.js",
+          "Docker"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "webapp-micro.example.com",
+          "subdomains": [
+            "admin.webapp-micro.example.com",
+            "app.webapp-micro.example.com",
+            "assets.webapp-micro.example.com",
+            "auth.webapp-micro.example.com",
+            "blog.webapp-micro.example.com",
+            "cdn.webapp-micro.example.com",
+            "dev.webapp-micro.example.com",
+            "manage.webapp-micro.example.com",
+            "media.webapp-micro.example.com",
+            "panel.webapp-micro.example.com",
+            "payment.webapp-micro.example.com",
+            "portal.webapp-micro.example.com",
+            "prod.webapp-micro.example.com",
+            "staging.webapp-micro.example.com",
+            "static.webapp-micro.example.com",
+            "store.webapp-micro.example.com",
+            "www.webapp-micro.example.com"
+          ],
+          "total_found": 17,
+          "execution_time_seconds": 14.039746245562302,
+          "sources_used": 13
+        },
+        "httpx": {
+          "total_checked": 17,
+          "live_endpoints": 14,
+          "endpoints": [
+            {
+              "url": "https://www.webapp-micro.example.com:8080",
+              "status_code": 200,
+              "title": "Page on www.webapp-micro.example.com",
+              "tech_stack": [
+                "React",
+                "Go",
+                "Node.js"
+              ],
+              "response_time_ms": 436,
+              "content_length": 39291
+            },
+            {
+              "url": "https://portal.webapp-micro.example.com:8080",
+              "status_code": 200,
+              "title": "Page on portal.webapp-micro.example.com",
+              "tech_stack": [
+                "Docker",
+                "Node.js",
+                "React"
+              ],
+              "response_time_ms": 249,
+              "content_length": 4295
+            },
+            {
+              "url": "https://manage.webapp-micro.example.com:8080",
+              "status_code": 200,
+              "title": "Page on manage.webapp-micro.example.com",
+              "tech_stack": [
+                "React",
+                "Node.js",
+                "Flask"
+              ],
+              "response_time_ms": 348,
+              "content_length": 16811
+            },
+            {
+              "url": "https://blog.webapp-micro.example.com:80",
+              "status_code": 403,
+              "title": "Page on blog.webapp-micro.example.com",
+              "tech_stack": [
+                "React",
+                "Flask",
+                "Docker"
+              ],
+              "response_time_ms": 318,
+              "content_length": 48914
+            },
+            {
+              "url": "https://payment.webapp-micro.example.com:443",
+              "status_code": 403,
+              "title": "Page on payment.webapp-micro.example.com",
+              "tech_stack": [
+                "Go",
+                "Flask",
+                "Node.js"
+              ],
+              "response_time_ms": 452,
+              "content_length": 26757
+            },
+            {
+              "url": "https://prod.webapp-micro.example.com:443",
+              "status_code": 301,
+              "title": "Page on prod.webapp-micro.example.com",
+              "tech_stack": [
+                "Node.js",
+                "React",
+                "Flask"
+              ],
+              "response_time_ms": 367,
+              "content_length": 29348
+            },
+            {
+              "url": "https://assets.webapp-micro.example.com:443",
+              "status_code": 302,
+              "title": "Page on assets.webapp-micro.example.com",
+              "tech_stack": [
+                "React",
+                "Go",
+                "Flask"
+              ],
+              "response_time_ms": 307,
+              "content_length": 11066
+            },
+            {
+              "url": "https://store.webapp-micro.example.com:8080",
+              "status_code": 403,
+              "title": "Page on store.webapp-micro.example.com",
+              "tech_stack": [
+                "Node.js",
+                "React",
+                "Docker"
+              ],
+              "response_time_ms": 200,
+              "content_length": 42523
+            },
+            {
+              "url": "https://cdn.webapp-micro.example.com:80",
+              "status_code": 301,
+              "title": "Page on cdn.webapp-micro.example.com",
+              "tech_stack": [
+                "Flask",
+                "Node.js",
+                "Docker"
+              ],
+              "response_time_ms": 375,
+              "content_length": 42821
+            },
+            {
+              "url": "https://media.webapp-micro.example.com:443",
+              "status_code": 200,
+              "title": "Page on media.webapp-micro.example.com",
+              "tech_stack": [
+                "Docker",
+                "Flask",
+                "Go"
+              ],
+              "response_time_ms": 68,
+              "content_length": 36030
+            },
+            {
+              "url": "https://admin.webapp-micro.example.com:80",
+              "status_code": 200,
+              "title": "Page on admin.webapp-micro.example.com",
+              "tech_stack": [
+                "Go",
+                "Flask",
+                "React"
+              ],
+              "response_time_ms": 401,
+              "content_length": 43691
+            },
+            {
+              "url": "https://static.webapp-micro.example.com:443",
+              "status_code": 200,
+              "title": "Page on static.webapp-micro.example.com",
+              "tech_stack": [
+                "React",
+                "Go",
+                "Node.js"
+              ],
+              "response_time_ms": 163,
+              "content_length": 44661
+            },
+            {
+              "url": "https://auth.webapp-micro.example.com:80",
+              "status_code": 200,
+              "title": "Page on auth.webapp-micro.example.com",
+              "tech_stack": [
+                "Node.js",
+                "Go",
+                "Docker"
+              ],
+              "response_time_ms": 343,
+              "content_length": 13034
+            },
+            {
+              "url": "https://panel.webapp-micro.example.com:443",
+              "status_code": 200,
+              "title": "Page on panel.webapp-micro.example.com",
+              "tech_stack": [
+                "Go",
+                "Flask",
+                "React"
+              ],
+              "response_time_ms": 375,
+              "content_length": 21688
+            }
+          ],
+          "execution_time_seconds": 58.354680519788516
+        },
+        "nmap": {
+          "target": "webapp-micro.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 5,
+          "services": [
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.20.2"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.22.1"
+            },
+            {
+              "port": 5000,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "unknown",
+              "version": null
+            },
+            {
+              "port": 8080,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http-proxy",
+              "version": "1.20.2"
+            },
+            {
+              "port": 9000,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "2.375.3"
+            }
+          ],
+          "execution_time_seconds": 274.81639841242395,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "comprehensive",
+        "httpx_mode": "full",
+        "nmap_mode": "thorough",
+        "reason": "Multiple custom ports = worth identifying services!"
+      },
+      "rewards": {
+        "optimal": 640,
+        "suboptimal": 500
+      }
+    },
+    {
+      "id": "phase1b_web_admin",
+      "name": "Web + Admin Panel",
+      "description": "Public website with admin control panel",
+      "target": "webapp-admin.example.com",
+      "complexity": "medium",
+      "scenario_type": "hybrid_web_admin",
+      "metadata": {
+        "total_subdomains": 10,
+        "live_endpoints": 7,
+        "open_ports": 3,
+        "critical_services": 0,
+        "port_list": [
+          80,
+          443,
+          8443
+        ],
+        "technologies": [
+          "WordPress",
+          "Admin Panel",
+          "Nginx",
+          "PHP"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "webapp-admin.example.com",
+          "subdomains": [
+            "admin.webapp-admin.example.com",
+            "api.webapp-admin.example.com",
+            "blog.webapp-admin.example.com",
+            "cdn.webapp-admin.example.com",
+            "checkout.webapp-admin.example.com",
+            "dev.webapp-admin.example.com",
+            "login.webapp-admin.example.com",
+            "panel.webapp-admin.example.com",
+            "portal.webapp-admin.example.com",
+            "store.webapp-admin.example.com"
+          ],
+          "total_found": 10,
+          "execution_time_seconds": 13.83418895930973,
+          "sources_used": 13
+        },
+        "httpx": {
+          "total_checked": 10,
+          "live_endpoints": 7,
+          "endpoints": [
+            {
+              "url": "https://admin.webapp-admin.example.com:443",
+              "status_code": 302,
+              "title": "Page on admin.webapp-admin.example.com",
+              "tech_stack": [
+                "Nginx",
+                "PHP",
+                "WordPress"
+              ],
+              "response_time_ms": 112,
+              "content_length": 41009
+            },
+            {
+              "url": "https://api.webapp-admin.example.com:80",
+              "status_code": 200,
+              "title": "Page on api.webapp-admin.example.com",
+              "tech_stack": [
+                "WordPress",
+                "Nginx",
+                "Admin Panel"
+              ],
+              "response_time_ms": 293,
+              "content_length": 4827
+            },
+            {
+              "url": "https://checkout.webapp-admin.example.com:443",
+              "status_code": 200,
+              "title": "Page on checkout.webapp-admin.example.com",
+              "tech_stack": [
+                "Admin Panel",
+                "Nginx",
+                "PHP"
+              ],
+              "response_time_ms": 102,
+              "content_length": 12248
+            },
+            {
+              "url": "https://panel.webapp-admin.example.com:443",
+              "status_code": 200,
+              "title": "Page on panel.webapp-admin.example.com",
+              "tech_stack": [
+                "PHP",
+                "WordPress",
+                "Admin Panel"
+              ],
+              "response_time_ms": 207,
+              "content_length": 6173
+            },
+            {
+              "url": "https://blog.webapp-admin.example.com:80",
+              "status_code": 200,
+              "title": "Page on blog.webapp-admin.example.com",
+              "tech_stack": [
+                "WordPress",
+                "Admin Panel",
+                "Nginx"
+              ],
+              "response_time_ms": 464,
+              "content_length": 34815
+            },
+            {
+              "url": "https://store.webapp-admin.example.com:443",
+              "status_code": 200,
+              "title": "Page on store.webapp-admin.example.com",
+              "tech_stack": [
+                "WordPress",
+                "Nginx",
+                "Admin Panel"
+              ],
+              "response_time_ms": 288,
+              "content_length": 31808
+            },
+            {
+              "url": "https://cdn.webapp-admin.example.com:80",
+              "status_code": 200,
+              "title": "Page on cdn.webapp-admin.example.com",
+              "tech_stack": [
+                "Admin Panel",
+                "PHP",
+                "Nginx"
+              ],
+              "response_time_ms": 56,
+              "content_length": 47961
+            }
+          ],
+          "execution_time_seconds": 12.735977018199282
+        },
+        "nmap": {
+          "target": "webapp-admin.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 3,
+          "services": [
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.20.2"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.24.0"
+            },
+            {
+              "port": 8443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https-alt",
+              "version": "1.24.0"
+            }
+          ],
+          "execution_time_seconds": 117.71297012192024,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "active",
+        "httpx_mode": "thorough",
+        "nmap_mode": "quick",
+        "reason": "Admin panel on 8443 worth quick check."
+      },
+      "rewards": {
+        "optimal": 570,
+        "suboptimal": 450
+      }
+    },
+    {
+      "id": "phase1b_web_mail",
+      "name": "Web + Mail Services",
+      "description": "Corporate website with mail server",
+      "target": "webapp-mail.example.com",
+      "complexity": "high",
+      "scenario_type": "hybrid_web_mail",
+      "metadata": {
+        "total_subdomains": 9,
+        "live_endpoints": 7,
+        "open_ports": 4,
+        "critical_services": 0,
+        "port_list": [
+          80,
+          443,
+          25,
+          587
+        ],
+        "technologies": [
+          "Corporate Site",
+          "Postfix",
+          "Nginx",
+          "WordPress"
+        ]
+      },
+      "tool_results": {
+        "subfinder": {
+          "target": "webapp-mail.example.com",
+          "subdomains": [
+            "api.webapp-mail.example.com",
+            "cdn.webapp-mail.example.com",
+            "checkout.webapp-mail.example.com",
+            "dev.webapp-mail.example.com",
+            "manage.webapp-mail.example.com",
+            "payment.webapp-mail.example.com",
+            "staging.webapp-mail.example.com",
+            "static.webapp-mail.example.com",
+            "store.webapp-mail.example.com"
+          ],
+          "total_found": 9,
+          "execution_time_seconds": 12.3474756661377,
+          "sources_used": 8
+        },
+        "httpx": {
+          "total_checked": 9,
+          "live_endpoints": 7,
+          "endpoints": [
+            {
+              "url": "https://dev.webapp-mail.example.com:443",
+              "status_code": 200,
+              "title": "Page on dev.webapp-mail.example.com",
+              "tech_stack": [
+                "Corporate Site",
+                "WordPress",
+                "Nginx"
+              ],
+              "response_time_ms": 230,
+              "content_length": 9047
+            },
+            {
+              "url": "https://checkout.webapp-mail.example.com:443",
+              "status_code": 200,
+              "title": "Page on checkout.webapp-mail.example.com",
+              "tech_stack": [
+                "Postfix",
+                "Corporate Site",
+                "WordPress"
+              ],
+              "response_time_ms": 69,
+              "content_length": 19122
+            },
+            {
+              "url": "https://manage.webapp-mail.example.com:443",
+              "status_code": 200,
+              "title": "Page on manage.webapp-mail.example.com",
+              "tech_stack": [
+                "WordPress",
+                "Corporate Site",
+                "Nginx"
+              ],
+              "response_time_ms": 61,
+              "content_length": 42229
+            },
+            {
+              "url": "https://staging.webapp-mail.example.com:80",
+              "status_code": 403,
+              "title": "Page on staging.webapp-mail.example.com",
+              "tech_stack": [
+                "Nginx",
+                "WordPress",
+                "Postfix"
+              ],
+              "response_time_ms": 429,
+              "content_length": 18072
+            },
+            {
+              "url": "https://store.webapp-mail.example.com:80",
+              "status_code": 302,
+              "title": "Page on store.webapp-mail.example.com",
+              "tech_stack": [
+                "Nginx",
+                "Corporate Site",
+                "WordPress"
+              ],
+              "response_time_ms": 393,
+              "content_length": 5599
+            },
+            {
+              "url": "https://cdn.webapp-mail.example.com:80",
+              "status_code": 200,
+              "title": "Page on cdn.webapp-mail.example.com",
+              "tech_stack": [
+                "Nginx",
+                "WordPress",
+                "Corporate Site"
+              ],
+              "response_time_ms": 118,
+              "content_length": 26655
+            },
+            {
+              "url": "https://payment.webapp-mail.example.com:80",
+              "status_code": 302,
+              "title": "Page on payment.webapp-mail.example.com",
+              "tech_stack": [
+                "Corporate Site",
+                "Nginx",
+                "WordPress"
+              ],
+              "response_time_ms": 206,
+              "content_length": 32689
+            }
+          ],
+          "execution_time_seconds": 43.21793534166906
+        },
+        "nmap": {
+          "target": "webapp-mail.example.com",
+          "total_ports_scanned": 1000,
+          "open_ports": 4,
+          "services": [
+            {
+              "port": 80,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "http",
+              "version": "1.20.2"
+            },
+            {
+              "port": 443,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "https",
+              "version": "1.24.0"
+            },
+            {
+              "port": 25,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "smtp",
+              "version": "3.6.7"
+            },
+            {
+              "port": 587,
+              "protocol": "tcp",
+              "state": "open",
+              "service": "smtp",
+              "version": "3.5.13"
+            }
+          ],
+          "execution_time_seconds": 280.05142154580994,
+          "scan_type": "service_detection"
+        }
+      },
+      "optimal_strategy": {
+        "subfinder_mode": "active",
+        "httpx_mode": "detailed",
+        "nmap_mode": "thorough",
+        "reason": "Mail server = worth thorough version detection!"
+      },
+      "rewards": {
+        "optimal": 630,
+        "suboptimal": 490
+      }
+    }
+  ]
+}

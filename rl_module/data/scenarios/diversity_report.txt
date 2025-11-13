@@ -1,0 +1,8 @@
+PHASE 1 SCENARIO DIVERSITY REPORT
+==================================================
+
+total_scenarios: 5
+type_distribution: {'small_business': 3, 'medium_enterprise': 2}
+optimal_strategy_distribution: {'passive': 3, 'active': 2}
+complexity_distribution: {'low': 2, 'medium': 2, 'high': 1}
+diversity_score: PASS

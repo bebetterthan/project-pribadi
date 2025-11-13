@@ -1,0 +1,36 @@
+{
+  "timestamp": "20251113_114648",
+  "phase": "1B",
+  "baselines": {
+    "random": {
+      "mean": 1416.75,
+      "std": 305.62750244140625,
+      "min": 790.0,
+      "max": 1995.0
+    },
+    "hardcoded": {
+      "mean": 1804.5,
+      "std": 321.51165771484375,
+      "min": 1350.0,
+      "max": 2550.0
+    },
+    "phase1a_wrapper": {
+      "mean": 1603.0,
+      "std": 242.00413513183594,
+      "min": 1175.0,
+      "max": 2070.0
+    }
+  },
+  "agent": {
+    "mean": 1693.0,
+    "std": 217.56263732910156,
+    "min": 1350.0,
+    "max": 2070.0,
+    "mean_length": 3.0,
+    "mean_subdomains": 0,
+    "mean_endpoints": 0,
+    "mean_ports": 0,
+    "mean_services": 0,
+    "nmap_usage_rate": 0
+  },
+  "success": 

@@ -1,0 +1,440 @@
+======================================================================
+REWARD CEILING ANALYSIS - Phase 1B
+======================================================================
+[LOADED] 20 scenarios from d:\Project pribadi\AI_Pentesting\rl_module\phase1b_three_tools\data\phase1b_train.json
+
+======================================================================
+SCENARIO: Modern Web Startup
+======================================================================
+Target: startup.example.com
+Ports: [80, 443, 3000, 8080]
+Type: WEB-ONLY
+
+Step 1 (Subfinder comprehensive): +270 (18 subdomains ├ù 15)
+Step 2 (HTTPX comprehensive): +140 (14 endpoints ├ù 10)
+Step 3 (SKIP nmap): +700 (strategic bonus)
+
+[OK] OPTIMAL PATH: Skip nmap on web-only
+
+----------------------------------------------------------------------
+TOTAL REWARD: 1110
+Breakdown: {'discovery': 410, 'completion': 0, 'strategic': 700, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: CDN-Heavy E-commerce
+======================================================================
+Target: shop.example.com
+Ports: [443]
+Type: WEB-ONLY
+
+Step 1 (Subfinder comprehensive): +180 (12 subdomains ├ù 15)
+Step 2 (HTTPX comprehensive): +100 (10 endpoints ├ù 10)
+Step 3 (SKIP nmap): +700 (strategic bonus)
+
+[OK] OPTIMAL PATH: Skip nmap on web-only
+
+----------------------------------------------------------------------
+TOTAL REWARD: 980
+Breakdown: {'discovery': 280, 'completion': 0, 'strategic': 700, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: API Gateway Architecture
+======================================================================
+Target: api.example.com
+Ports: [443, 8080]
+Type: WEB-ONLY
+
+Step 1 (Subfinder comprehensive): +225 (15 subdomains ├ù 15)
+Step 2 (HTTPX comprehensive): +120 (12 endpoints ├ù 10)
+Step 3 (SKIP nmap): +700 (strategic bonus)
+
+[OK] OPTIMAL PATH: Skip nmap on web-only
+
+----------------------------------------------------------------------
+TOTAL REWARD: 1045
+Breakdown: {'discovery': 345, 'completion': 0, 'strategic': 700, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: Load Balanced Web Farm
+======================================================================
+Target: web.example.com
+Ports: [80, 443, 8080, 8443]
+Type: WEB-ONLY
+
+Step 1 (Subfinder comprehensive): +330 (22 subdomains ├ù 15)
+Step 2 (HTTPX comprehensive): +190 (19 endpoints ├ù 10)
+Step 3 (SKIP nmap): +700 (strategic bonus)
+
+[OK] OPTIMAL PATH: Skip nmap on web-only
+
+----------------------------------------------------------------------
+TOTAL REWARD: 1220
+Breakdown: {'discovery': 520, 'completion': 0, 'strategic': 700, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: Development Web Environment
+======================================================================
+Target: dev.example.com
+Ports: [3000, 8080, 8081]
+Type: WEB-ONLY
+
+Step 1 (Subfinder comprehensive): +240 (16 subdomains ├ù 15)
+Step 2 (HTTPX comprehensive): +110 (11 endpoints ├ù 10)
+Step 3 (SKIP nmap): +700 (strategic bonus)
+
+[OK] OPTIMAL PATH: Skip nmap on web-only
+
+----------------------------------------------------------------------
+TOTAL REWARD: 1050
+Breakdown: {'discovery': 350, 'completion': 0, 'strategic': 700, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: Database Server Cluster
+======================================================================
+Target: db.example.com
+Ports: [80, 443, 3306, 5432, 6379, 27017]
+Type: INFRASTRUCTURE
+
+Step 1 (Subfinder comprehensive): +120 (8 subdomains ├ù 15)
+Step 2 (HTTPX thorough): +50 (5 endpoints ├ù 10)
+Step 3 (NMAP service):
+  - Ports: +140 (2 web├ù10 + 4 infra├ù30)
+  - Services: +0 (0 ├ù 50)
+  - Versions: +150 (6 ├ù 25)
+  - Completion bonus: +150
+  - Strategic bonus: +500
+  - 3-tool bonus: +900
+
+[OK] OPTIMAL PATH: Use nmap service on infrastructure
+
+----------------------------------------------------------------------
+TOTAL REWARD: 2010
+Breakdown: {'discovery': 460, 'completion': 150, 'strategic': 1400, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: Mail Server Infrastructure
+======================================================================
+Target: mail.example.com
+Ports: [25, 143, 587, 993, 995]
+Type: HYBRID
+
+Step 1 (Subfinder comprehensive): +90 (6 subdomains ├ù 15)
+Step 2 (HTTPX comprehensive): +20 (2 endpoints ├ù 10)
+Step 3 (NMAP quick): +150 (0 web├ù10 + 5 infra├ù30)
+  - Completion bonus: +100
+  - Strategic bonus: +150
+
+[OK] OPTIMAL PATH: Use nmap quick on hybrid
+
+----------------------------------------------------------------------
+TOTAL REWARD: 510
+Breakdown: {'discovery': 260, 'completion': 100, 'strategic': 150, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: SSH Infrastructure
+======================================================================
+Target: infra.example.com
+Ports: [22, 80, 443, 3306, 6379]
+Type: INFRASTRUCTURE
+
+Step 1 (Subfinder comprehensive): +150 (10 subdomains ├ù 15)
+Step 2 (HTTPX thorough): +70 (7 endpoints ├ù 10)
+Step 3 (NMAP service):
+  - Ports: +110 (2 web├ù10 + 3 infra├ù30)
+  - Services: +0 (0 ├ù 50)
+  - Versions: +125 (5 ├ù 25)
+  - Completion bonus: +150
+  - Strategic bonus: +500
+  - 3-tool bonus: +900
+
+[OK] OPTIMAL PATH: Use nmap service on infrastructure
+
+----------------------------------------------------------------------
+TOTAL REWARD: 2005
+Breakdown: {'discovery': 455, 'completion': 150, 'strategic': 1400, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: Enterprise Windows Domain
+======================================================================
+Target: corp.example.com
+Ports: [80, 443, 445, 1433, 3389]
+Type: INFRASTRUCTURE
+
+Step 1 (Subfinder comprehensive): +180 (12 subdomains ├ù 15)
+Step 2 (HTTPX thorough): +100 (10 endpoints ├ù 10)
+Step 3 (NMAP service):
+  - Ports: +110 (2 web├ù10 + 3 infra├ù30)
+  - Services: +0 (0 ├ù 50)
+  - Versions: +75 (3 ├ù 25)
+  - Completion bonus: +150
+  - Strategic bonus: +500
+  - 3-tool bonus: +900
+
+[OK] OPTIMAL PATH: Use nmap service on infrastructure
+
+----------------------------------------------------------------------
+TOTAL REWARD: 2015
+Breakdown: {'discovery': 465, 'completion': 150, 'strategic': 1400, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: Development Infrastructure
+======================================================================
+Target: dev-infra.example.com
+Ports: [22, 80, 443, 5432, 8080, 9000]
+Type: INFRASTRUCTURE
+
+Step 1 (Subfinder comprehensive): +210 (14 subdomains ├ù 15)
+Step 2 (HTTPX thorough): +100 (10 endpoints ├ù 10)
+Step 3 (NMAP service):
+  - Ports: +120 (3 web├ù10 + 3 infra├ù30)
+  - Services: +0 (0 ├ù 50)
+  - Versions: +150 (6 ├ù 25)
+  - Completion bonus: +150
+  - Strategic bonus: +500
+  - 3-tool bonus: +900
+
+[OK] OPTIMAL PATH: Use nmap service on infrastructure
+
+----------------------------------------------------------------------
+TOTAL REWARD: 2130
+Breakdown: {'discovery': 580, 'completion': 150, 'strategic': 1400, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: Admin Panel Infrastructure
+======================================================================
+Target: admin.example.com
+Ports: [80, 443, 8080, 8443, 9090]
+Type: WEB-ONLY
+
+Step 1 (Subfinder comprehensive): +135 (9 subdomains ├ù 15)
+Step 2 (HTTPX comprehensive): +60 (6 endpoints ├ù 10)
+Step 3 (SKIP nmap): +700 (strategic bonus)
+
+[OK] OPTIMAL PATH: Skip nmap on web-only
+
+----------------------------------------------------------------------
+TOTAL REWARD: 895
+Breakdown: {'discovery': 195, 'completion': 0, 'strategic': 700, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: Monitoring Stack
+======================================================================
+Target: monitor.example.com
+Ports: [80, 443, 3000, 9090, 9093, 9200, 5601]
+Type: HYBRID
+
+Step 1 (Subfinder comprehensive): +165 (11 subdomains ├ù 15)
+Step 2 (HTTPX comprehensive): +80 (8 endpoints ├ù 10)
+Step 3 (NMAP quick): +150 (3 web├ù10 + 4 infra├ù30)
+  - Completion bonus: +100
+  - Strategic bonus: +150
+
+[OK] OPTIMAL PATH: Use nmap quick on hybrid
+
+----------------------------------------------------------------------
+TOTAL REWARD: 645
+Breakdown: {'discovery': 395, 'completion': 100, 'strategic': 150, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: Full Stack Infrastructure
+======================================================================
+Target: full.example.com
+Ports: [22, 80, 443, 3306, 5432, 6379, 8080, 9000]
+Type: INFRASTRUCTURE
+
+Step 1 (Subfinder comprehensive): +300 (20 subdomains ├ù 15)
+Step 2 (HTTPX thorough): +150 (15 endpoints ├ù 10)
+Step 3 (NMAP service):
+  - Ports: +180 (3 web├ù10 + 5 infra├ù30)
+  - Services: +0 (0 ├ù 50)
+  - Versions: +200 (8 ├ù 25)
+  - Completion bonus: +150
+  - Strategic bonus: +500
+  - 3-tool bonus: +900
+
+[OK] OPTIMAL PATH: Use nmap service on infrastructure
+
+----------------------------------------------------------------------
+TOTAL REWARD: 2380
+Breakdown: {'discovery': 830, 'completion': 150, 'strategic': 1400, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: Web + Monitoring
+======================================================================
+Target: webapp-mon.example.com
+Ports: [80, 443, 9090]
+Type: WEB-ONLY
+
+Step 1 (Subfinder comprehensive): +195 (13 subdomains ├ù 15)
+Step 2 (HTTPX comprehensive): +110 (11 endpoints ├ù 10)
+Step 3 (SKIP nmap): +700 (strategic bonus)
+
+[OK] OPTIMAL PATH: Skip nmap on web-only
+
+----------------------------------------------------------------------
+TOTAL REWARD: 1005
+Breakdown: {'discovery': 305, 'completion': 0, 'strategic': 700, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: Web + Database
+======================================================================
+Target: webapp-db.example.com
+Ports: [80, 443, 3306]
+Type: HYBRID
+
+Step 1 (Subfinder comprehensive): +165 (11 subdomains ├ù 15)
+Step 2 (HTTPX comprehensive): +70 (7 endpoints ├ù 10)
+Step 3 (NMAP quick): +50 (2 web├ù10 + 1 infra├ù30)
+  - Completion bonus: +100
+  - Strategic bonus: +150
+
+[OK] OPTIMAL PATH: Use nmap quick on hybrid
+
+----------------------------------------------------------------------
+TOTAL REWARD: 535
+Breakdown: {'discovery': 285, 'completion': 100, 'strategic': 150, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: Web + SSH
+======================================================================
+Target: webapp-ssh.example.com
+Ports: [22, 80, 443]
+Type: HYBRID
+
+Step 1 (Subfinder comprehensive): +210 (14 subdomains ├ù 15)
+Step 2 (HTTPX comprehensive): +120 (12 endpoints ├ù 10)
+Step 3 (NMAP quick): +50 (2 web├ù10 + 1 infra├ù30)
+  - Completion bonus: +100
+  - Strategic bonus: +150
+
+[OK] OPTIMAL PATH: Use nmap quick on hybrid
+
+----------------------------------------------------------------------
+TOTAL REWARD: 630
+Breakdown: {'discovery': 380, 'completion': 100, 'strategic': 150, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: Web + Redis Cache
+======================================================================
+Target: webapp-cache.example.com
+Ports: [80, 443, 6379]
+Type: HYBRID
+
+Step 1 (Subfinder comprehensive): +180 (12 subdomains ├ù 15)
+Step 2 (HTTPX comprehensive): +100 (10 endpoints ├ù 10)
+Step 3 (NMAP quick): +50 (2 web├ù10 + 1 infra├ù30)
+  - Completion bonus: +100
+  - Strategic bonus: +150
+
+[OK] OPTIMAL PATH: Use nmap quick on hybrid
+
+----------------------------------------------------------------------
+TOTAL REWARD: 580
+Breakdown: {'discovery': 330, 'completion': 100, 'strategic': 150, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: Web + Multiple Backend Services
+======================================================================
+Target: webapp-micro.example.com
+Ports: [80, 443, 5000, 8080, 9000]
+Type: WEB-ONLY
+
+Step 1 (Subfinder comprehensive): +255 (17 subdomains ├ù 15)
+Step 2 (HTTPX comprehensive): +140 (14 endpoints ├ù 10)
+Step 3 (SKIP nmap): +700 (strategic bonus)
+
+[OK] OPTIMAL PATH: Skip nmap on web-only
+
+----------------------------------------------------------------------
+TOTAL REWARD: 1095
+Breakdown: {'discovery': 395, 'completion': 0, 'strategic': 700, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: Web + Admin Panel
+======================================================================
+Target: webapp-admin.example.com
+Ports: [80, 443, 8443]
+Type: WEB-ONLY
+
+Step 1 (Subfinder comprehensive): +150 (10 subdomains ├ù 15)
+Step 2 (HTTPX comprehensive): +70 (7 endpoints ├ù 10)
+Step 3 (SKIP nmap): +700 (strategic bonus)
+
+[OK] OPTIMAL PATH: Skip nmap on web-only
+
+----------------------------------------------------------------------
+TOTAL REWARD: 920
+Breakdown: {'discovery': 220, 'completion': 0, 'strategic': 700, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SCENARIO: Web + Mail Services
+======================================================================
+Target: webapp-mail.example.com
+Ports: [80, 443, 25, 587]
+Type: HYBRID
+
+Step 1 (Subfinder comprehensive): +135 (9 subdomains ├ù 15)
+Step 2 (HTTPX comprehensive): +70 (7 endpoints ├ù 10)
+Step 3 (NMAP quick): +80 (2 web├ù10 + 2 infra├ù30)
+  - Completion bonus: +100
+  - Strategic bonus: +150
+
+[OK] OPTIMAL PATH: Use nmap quick on hybrid
+
+----------------------------------------------------------------------
+TOTAL REWARD: 535
+Breakdown: {'discovery': 285, 'completion': 100, 'strategic': 150, 'efficiency': 0}
+----------------------------------------------------------------------
+
+======================================================================
+SUMMARY - ALL SCENARIOS
+======================================================================
+
+WEB-ONLY Scenarios (9):
+  Mean: 1036
+  Range: [895, 1220]
+
+INFRASTRUCTURE Scenarios (5):
+  Mean: 2108
+  Range: [2005, 2380]
+
+HYBRID Scenarios (6):
+  Mean: 572
+  Range: [510, 645]
+
+======================================================================
+OVERALL OPTIMAL MEAN: 1165
+CURRENT V10 MEAN: 1631
+TARGET: 2079
+======================================================================
+
+GAP ANALYSIS:
+  Current vs Optimal: 140.0% efficiency
+  Current vs Target: 78.5% of target
+  Optimal vs Target: 56.0% of target
+
+[!] REWARD CEILING TOO LOW!
+  Maximum possible: 1165
+  Need to increase: 914 points
+
+[*] RECOMMENDATION:
+  Amplify all reward components by 1.78x
